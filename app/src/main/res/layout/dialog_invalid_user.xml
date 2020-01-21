@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dgInvalidUser_rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgInvalidUser_tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/padding_small"
+            android:gravity="center|right"
+            android:text="باریاب نو"
+            android:textColor="@color/blue_800"
+            android:textSize="@dimen/text_size_medium"
+            app:tvCustomFont="@string/baseFont" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dgInvalidUser_rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dgInvalidUser_rlToolbar"
+        android:padding="@dimen/padding_medium">
+
+        <ImageView
+            android:id="@+id/dgInvalidUser_ivWarning"
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_64sdp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_warning"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgInvalidUser_tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dgInvalidUser_ivWarning"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:gravity="center"
+            android:text="شما جزو متصدیان تایید شده سازمان نیستید."
+            android:textColor="@color/black_text_secondary"
+            android:textSize="@dimen/text_size_medium"
+            app:tvCustomFont="@string/baseFont" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dgInvalidUser_rlContainer"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:background="@drawable/edittext_rectangle">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/dgInvalidUser_btnClose"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="بستن"
+                android:textColor="@color/blue_700"
+                android:textSize="@dimen/text_size_medium"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.70"
+            android:background="@drawable/edittext_rectangle">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/dgInvalidUser_btnHelp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="راهنمای اخذ تاییدیه از سازمان"
+                android:textColor="@color/blue_700"
+                android:textSize="@dimen/text_size_medium"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

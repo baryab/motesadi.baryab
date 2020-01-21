@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/acEditShipment_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:background="@color/colorAccent"
+        android:titleTextAppearance="@color/white"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="ویرایش بار"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:background="@drawable/toolbar_dropshadow"
+        android:layout_below="@+id/acEditShipment_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/acEditShipment_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_tvLocation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/acEditShipment_btnLocation"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:gravity="center|right"
+                android:text="تعيين محل بارگیری و تخليه"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_btnLocation"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/button_selector_1"
+                android:gravity="center"
+                android:clickable="true"
+                android:text="نقشه"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/blue_grey_800"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_tvLocationHint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acEditShipment_tvLocation"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:paddingRight="15dp"
+                android:gravity="center|left"
+                android:text="مبدا و مقصد نامعلوم"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/blue_300"
+                app:tvCustomFont="@string/baseFont"
+                android:visibility="gone"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_tvCarChoose"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_below="@+id/acEditShipment_tvLocationHint"
+                android:layout_toRightOf="@+id/acEditShipment_btnCarChoose"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:gravity="center|right"
+                android:text="نوع ماشین را مشخص کنید"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_btnCarChoose"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignBaseline="@+id/acEditShipment_tvCarChoose"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/button_selector_1"
+                android:gravity="center"
+                android:clickable="true"
+                android:text="تعیین"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/blue_grey_800"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_tvCarChooseHint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acEditShipment_tvCarChoose"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:paddingRight="15dp"
+                android:gravity="center|left"
+                android:text="نوع ماشین نامشخص"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/blue_300"
+                app:tvCustomFont="@string/baseFont"
+                android:visibility="gone"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_tvLoadingType"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acEditShipment_tvCarChooseHint"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:gravity="center|right"
+                android:text="نوع بار"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                android:id="@+id/acEditShipment_etLoadingType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/acEditShipment_tvLoadingType"
+                android:layout_alignTop="@+id/acEditShipment_tvLoadingType"
+                android:layout_alignBottom="@+id/acEditShipment_tvLoadingType"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/edittext_border"
+                android:gravity="right|center"
+                android:inputType="text"
+                android:hint="مثل بشکه خالی"
+                android:textColorHint="@color/white_text_secondary"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_tvLoadingWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acEditShipment_tvLoadingType"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:gravity="center|right"
+                android:text="وزن بار"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_tvLoadingWeightHint"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_toLeftOf="@+id/acEditShipment_tvLoadingWeight"
+                android:layout_alignTop="@+id/acEditShipment_tvLoadingWeight"
+                android:layout_alignBottom="@+id/acEditShipment_tvLoadingWeight"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:paddingRight="5dp"
+                android:gravity="center|right"
+                android:text="(تن)"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/blue_300"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                android:id="@+id/acEditShipment_etLoadingWeight"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/acEditShipment_tvLoadingWeightHint"
+                android:layout_alignTop="@+id/acEditShipment_tvLoadingWeight"
+                android:layout_alignBottom="@+id/acEditShipment_tvLoadingWeight"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/edittext_border"
+                android:gravity="right|center"
+                android:inputType="numberDecimal"
+                android:maxLength="9"
+                android:hint="مثل   1.5 تن"
+                android:textColorHint="@color/white_text_secondary"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"/>
+
+            <!-- loading fare type -->
+
+            <com.noavaran.system.vira.baryab.customviews.ExpandableLayout
+                android:id="@+id/acEditShipment_elLoadingFareType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acEditShipment_tvLoadingWeight"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:clickable="true"
+                android:background="@drawable/edittext_border">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_34sdp">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvLoadingFareType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center|right"
+                        android:text="نوع کرایه بار"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvLoadingFareTypeHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignTop="@+id/acEditShipment_tvLoadingFareType"
+                        android:layout_alignBottom="@+id/acEditShipment_tvLoadingFareType"
+                        android:layout_toLeftOf="@+id/acEditShipment_tvLoadingFareType"
+                        android:layout_toRightOf="@+id/acEditShipment_btnLoadingFareTypeArrowDropDown"
+                        android:paddingRight="@dimen/_4sdp"
+                        android:paddingLeft="@dimen/_4sdp"
+                        android:gravity="center|right"
+                        android:text=""
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/blue_300"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_btnLoadingFareTypeArrowDropDown"
+                        android:layout_width="@dimen/_34sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/_20sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseTextIconFont" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:canExpand="true">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/acEditShipment_rvLoadingFareType"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+            </com.noavaran.system.vira.baryab.customviews.ExpandableLayout>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_tvLoadingFare"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acEditShipment_elLoadingFareType"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:paddingRight="5dp"
+                android:gravity="center|right"
+                android:text="کرایه بار"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_tvLoadingFareHint"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_toLeftOf="@+id/acEditShipment_tvLoadingFare"
+                android:layout_alignTop="@+id/acEditShipment_tvLoadingFare"
+                android:layout_alignBottom="@+id/acEditShipment_tvLoadingFare"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:paddingRight="5dp"
+                android:gravity="center|right"
+                android:text="(تومان)"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/blue_300"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                android:id="@+id/acEditShipment_etLoadingFare"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/acEditShipment_tvLoadingFareHint"
+                android:layout_alignTop="@+id/acEditShipment_tvLoadingFare"
+                android:layout_alignBottom="@+id/acEditShipment_tvLoadingFare"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:padding="5dp"
+                android:background="@drawable/edittext_border"
+                android:gravity="right|center"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textColorHint="@color/white_text_secondary"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acEditShipment_tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_below="@+id/acEditShipment_tvLoadingFare"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:paddingRight="5dp"
+                android:gravity="center|right"
+                android:text="توضیحات"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                android:id="@+id/acEditShipment_etّDescription"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acEditShipment_tvDescription"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:padding="5dp"
+                android:background="@drawable/edittext_border"
+                android:gravity="right"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:maxLines="7"
+                android:textColorHint="@color/white_text_secondary"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/white"
+                app:etCustomFont="@string/baseFont"/>
+
+            <RelativeLayout
+                android:id="@+id/acEditShipment_llPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acEditShipment_etّDescription"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+                <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                    android:id="@+id/acEditShipment_btnChooseLoadingPhoto"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_34sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/button_selector_1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="افزودن"
+                    android:textColor="@color/blue_grey_800"
+                    android:textSize="@dimen/_12sdp"
+                    app:tvCustomFont="@string/baseFont" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/acEditShipment_btnChooseLoadingPhoto"
+                    android:layout_alignBottom="@+id/acEditShipment_btnChooseLoadingPhoto"
+                    android:layout_toRightOf="@+id/acEditShipment_btnChooseLoadingPhoto"
+                    android:orientation="vertical">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:gravity="center|right"
+                        android:text="عکس"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        app:tvCustomFont="@string/baseFont" />
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_15sdp"
+                        android:gravity="center|right"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="افزودن عکس براي بار باعث بيشتر دیده شدن آن ميشود"
+                        android:textColor="@color/white_text_secondary"
+                        android:textSize="@dimen/_7sdp"
+                        app:tvCustomFont="@string/baseFont" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/acEditShipment_ivLoadingPhotoPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acEditShipment_llPhoto"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"/>
+
+            <!-- more details -->
+
+            <com.noavaran.system.vira.baryab.customviews.ExpandableLayout
+                android:id="@+id/acEditShipment_elMoreDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acEditShipment_ivLoadingPhotoPreview"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:clickable="true"
+                android:background="@drawable/edittext_border">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_34sdp">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvMoreDetails"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center|right"
+                        android:text="جزئیات بیشتر"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_btnMoreDetailsArrowDropDown"
+                        android:layout_width="@dimen/_34sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/_20sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseTextIconFont" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/acEditShipment_rlMoreDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:canExpand="true">
+
+                    <!-- car length -->
+
+                    <com.noavaran.system.vira.baryab.customviews.ExpandableLayout
+                        android:id="@+id/acEditShipment_elCarLength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:background="@drawable/edittext_border">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_34sdp">
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarLength"
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:gravity="center|right"
+                                android:text="طول مناسب"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_btnCarLengthArrowDropDown"
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:text=""
+                                android:textSize="@dimen/_20sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseTextIconFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarLengthHeaderLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toLeftOf="@+id/acEditShipment_tvCarLength"
+                                android:layout_toRightOf="@+id/acEditShipment_btnCarLengthArrowDropDown"
+                                android:layout_marginLeft="@dimen/_8sdp"
+                                android:gravity="center|right"
+                                android:text="بازه از  3 تا  7  متر"
+                                android:textSize="@dimen/_10sdp"
+                                android:textColor="@color/white_text_secondary"
+                                app:tvCustomFont="@string/baseFont"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            app:canExpand="true">
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarLengthFrom"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignTop="@+id/acEditShipment_etCarLengthFrom"
+                                android:layout_alignBottom="@+id/acEditShipment_etCarLengthFrom"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:text="از"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                                android:id="@+id/acEditShipment_etCarLengthFrom"
+                                android:layout_width="@dimen/_105sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_toLeftOf="@+id/acEditShipment_tvCarLengthFrom"
+                                android:padding="5dp"
+                                android:background="@drawable/edittext_border"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:hint="متر"
+                                android:textColorHint="@color/white_text_secondary"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:etCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarLengthTo"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_toLeftOf="@+id/acEditShipment_etCarLengthFrom"
+                                android:layout_toRightOf="@+id/acEditShipment_etCarLengthTo"
+                                android:layout_alignTop="@+id/acEditShipment_etCarLengthTo"
+                                android:layout_alignBottom="@+id/acEditShipment_etCarLengthTo"
+                                android:gravity="center"
+                                android:text="تا"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                                android:id="@+id/acEditShipment_etCarLengthTo"
+                                android:layout_width="@dimen/_105sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:padding="5dp"
+                                android:background="@drawable/edittext_border"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:hint="متر"
+                                android:textColorHint="@color/white_text_secondary"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:etCustomFont="@string/baseFont"/>
+
+                        </RelativeLayout>
+
+                    </com.noavaran.system.vira.baryab.customviews.ExpandableLayout>
+
+                    <!-- car width -->
+
+                    <com.noavaran.system.vira.baryab.customviews.ExpandableLayout
+                        android:id="@+id/acEditShipment_elCarWidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/acEditShipment_elCarLength"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:background="@drawable/edittext_border">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_34sdp">
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarWidth"
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:gravity="center|right"
+                                android:text="عرض مناسب"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseFont" />
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_btnCarWidthArrowDropDown"
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:text=""
+                                android:textSize="@dimen/_20sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseTextIconFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarWidthHeaderLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toLeftOf="@+id/acEditShipment_tvCarWidth"
+                                android:layout_toRightOf="@+id/acEditShipment_btnCarWidthArrowDropDown"
+                                android:gravity="center|right"
+                                android:text="بازه از  1.7 تا   2.5  متر"
+                                android:textSize="@dimen/_10sdp"
+                                android:textColor="@color/white_text_secondary"
+                                app:tvCustomFont="@string/baseFont"
+                                android:layout_alignParentTop="true"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            app:canExpand="true">
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarWidthFrom"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignTop="@+id/acEditShipment_etCarWidthFrom"
+                                android:layout_alignBottom="@+id/acEditShipment_etCarWidthFrom"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:text="از"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                                android:id="@+id/acEditShipment_etCarWidthFrom"
+                                android:layout_width="@dimen/_105sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_toLeftOf="@+id/acEditShipment_tvCarWidthFrom"
+                                android:padding="5dp"
+                                android:background="@drawable/edittext_border"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:hint="متر"
+                                android:textColorHint="@color/white_text_secondary"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:etCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarWidthTo"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_toLeftOf="@+id/acEditShipment_etCarWidthFrom"
+                                android:layout_toRightOf="@+id/acEditShipment_etCarWidthTo"
+                                android:layout_alignTop="@+id/acEditShipment_etCarWidthTo"
+                                android:layout_alignBottom="@+id/acEditShipment_etCarWidthTo"
+                                android:gravity="center"
+                                android:text="تا"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                                android:id="@+id/acEditShipment_etCarWidthTo"
+                                android:layout_width="@dimen/_105sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:padding="5dp"
+                                android:background="@drawable/edittext_border"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:hint="متر"
+                                android:textColorHint="@color/white_text_secondary"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:etCustomFont="@string/baseFont"/>
+
+                        </RelativeLayout>
+
+                    </com.noavaran.system.vira.baryab.customviews.ExpandableLayout>
+
+                    <!-- car height -->
+
+                    <com.noavaran.system.vira.baryab.customviews.ExpandableLayout
+                        android:id="@+id/acEditShipment_elCarHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/acEditShipment_elCarWidth"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:background="@drawable/edittext_border">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_34sdp">
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarHeight"
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:gravity="center|right"
+                                android:text="ارتفاع مناسب"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_btnCarHeightArrowDropDown"
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:text=""
+                                android:textSize="@dimen/_20sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseTextIconFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarHeightHeaderLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_toLeftOf="@+id/acEditShipment_tvCarHeight"
+                                android:layout_toRightOf="@+id/acEditShipment_btnCarHeightArrowDropDown"
+                                android:layout_marginLeft="@dimen/_8sdp"
+                                android:gravity="center|right"
+                                android:text="بازه از  1.8 تا   3.5  متر"
+                                android:textSize="@dimen/_10sdp"
+                                android:textColor="@color/white_text_secondary"
+                                app:tvCustomFont="@string/baseFont"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            app:canExpand="true">
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarHeightFrom"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignTop="@+id/acEditShipment_etCarHeightFrom"
+                                android:layout_alignBottom="@+id/acEditShipment_etCarHeightFrom"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:text="از"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                                android:id="@+id/acEditShipment_etCarHeightFrom"
+                                android:layout_width="@dimen/_105sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_toLeftOf="@+id/acEditShipment_tvCarHeightFrom"
+                                android:padding="5dp"
+                                android:background="@drawable/edittext_border"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:hint="متر"
+                                android:textColorHint="@color/white_text_secondary"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:etCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                                android:id="@+id/acEditShipment_tvCarHeightTo"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_toLeftOf="@+id/acEditShipment_etCarHeightFrom"
+                                android:layout_toRightOf="@+id/acEditShipment_etCarHeightTo"
+                                android:layout_alignTop="@+id/acEditShipment_etCarHeightTo"
+                                android:layout_alignBottom="@+id/acEditShipment_etCarHeightTo"
+                                android:gravity="center"
+                                android:text="تا"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:tvCustomFont="@string/baseFont"/>
+
+                            <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                                android:id="@+id/acEditShipment_etCarHeightTo"
+                                android:layout_width="@dimen/_105sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="15dp"
+                                android:padding="5dp"
+                                android:background="@drawable/edittext_border"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:hint="متر"
+                                android:textColorHint="@color/white_text_secondary"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/white"
+                                app:etCustomFont="@string/baseFont"/>
+
+                        </RelativeLayout>
+
+                    </com.noavaran.system.vira.baryab.customviews.ExpandableLayout>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvSpendingWarehouse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/acEditShipment_elCarHeight"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:paddingRight="5dp"
+                        android:gravity="center|right"
+                        android:text="خرج انبار"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont" />
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvSpendingWarehouseHint"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_alignTop="@+id/acEditShipment_tvSpendingWarehouse"
+                        android:layout_alignBottom="@+id/acEditShipment_tvSpendingWarehouse"
+                        android:layout_toLeftOf="@+id/acEditShipment_tvSpendingWarehouse"
+                        android:paddingRight="5dp"
+                        android:gravity="center|right"
+                        android:text="(تومان)"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/blue_300"
+                        app:tvCustomFont="@string/baseFont" />
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomEditText
+                        android:id="@+id/acEditShipment_etSpendingWarehouse"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@+id/acEditShipment_tvSpendingWarehouse"
+                        android:layout_alignBottom="@+id/acEditShipment_tvSpendingWarehouse"
+                        android:layout_toLeftOf="@+id/acEditShipment_tvSpendingWarehouseHint"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:padding="5dp"
+                        android:background="@drawable/edittext_border"
+                        android:gravity="right|center"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColorHint="@color/white_text_secondary"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/white"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvLoadingTime"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/acEditShipment_tvSpendingWarehouse"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:gravity="center|right"
+                        android:text="زمان بارگیری"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvLoadingTimeHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/acEditShipment_tvLoadingTime"
+                        android:layout_toRightOf="@+id/acEditShipment_btnLoadingTime"
+                        android:layout_alignTop="@+id/acEditShipment_tvLoadingTime"
+                        android:layout_alignBottom="@+id/acEditShipment_tvLoadingTime"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/white_text_secondary"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_btnLoadingTime"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@+id/acEditShipment_tvLoadingTimeHint"
+                        android:layout_alignBottom="@+id/acEditShipment_tvLoadingTimeHint"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:background="@drawable/button_selector_1"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:text="تعیین"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/blue_grey_800"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvDetermineDischargeTime"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_below="@+id/acEditShipment_tvLoadingTime"
+                        android:layout_alignRight="@+id/acEditShipment_tvDetermineExpirationTime"
+                        android:layout_alignEnd="@+id/acEditShipment_tvDetermineExpirationTime"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:gravity="center|right"
+                        android:text="تعیین زمان تخلیه"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont" />
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvDetermineDischargeTimeHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/acEditShipment_tvDetermineDischargeTime"
+                        android:layout_toRightOf="@+id/acEditShipment_btnDetermineDischargeTime"
+                        android:layout_alignTop="@+id/acEditShipment_tvDetermineDischargeTime"
+                        android:layout_alignBottom="@+id/acEditShipment_tvDetermineDischargeTime"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/white_text_secondary"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_btnDetermineDischargeTime"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@+id/acEditShipment_tvDetermineDischargeTime"
+                        android:layout_alignBottom="@+id/acEditShipment_tvDetermineDischargeTime"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:background="@drawable/button_selector_1"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:text="تعیین"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/blue_grey_800"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvDetermineExpirationTime"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/acEditShipment_tvDetermineDischargeTime"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:paddingRight="5dp"
+                        android:gravity="center|right"
+                        android:text="تعیین زمان انقضا"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvDetermineExpirationTimeHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/acEditShipment_tvDetermineExpirationTime"
+                        android:layout_toRightOf="@+id/acEditShipment_btnDetermineExpirationTime"
+                        android:layout_alignTop="@+id/acEditShipment_tvDetermineExpirationTime"
+                        android:layout_alignBottom="@+id/acEditShipment_tvDetermineExpirationTime"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/white_text_secondary"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_btnDetermineExpirationTime"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@+id/acEditShipment_tvDetermineExpirationTime"
+                        android:layout_alignBottom="@+id/acEditShipment_tvDetermineExpirationTime"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:background="@drawable/button_selector_1"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:text="تعیین"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/blue_grey_800"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomSwitchButton
+                        android:id="@+id/acEditShipment_btnPaymentIsPaidAfterLoadingArriveToDestination"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/acEditShipment_tvDetermineExpirationTime"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:sb_checked_color="@color/blue_500"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvPaymentIsPaidAfterLoadingArriveToDestination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/acEditShipment_btnPaymentIsPaidAfterLoadingArriveToDestination"
+                        android:layout_alignBottom="@+id/acEditShipment_btnPaymentIsPaidAfterLoadingArriveToDestination"
+                        android:layout_toLeftOf="@+id/acEditShipment_btnPaymentIsPaidAfterLoadingArriveToDestination"
+                        android:layout_below="@id/acEditShipment_tvDetermineExpirationTime"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:paddingRight="5dp"
+                        android:gravity="center|right"
+                        android:text="تسویه به صورت پس از رسید"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomSwitchButton
+                        android:id="@+id/acEditShipment_btnLoadingIsGoingRound"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/acEditShipment_btnPaymentIsPaidAfterLoadingArriveToDestination"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:sb_checked_color="@color/blue_500"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvLoadingIsGoingRound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/acEditShipment_btnPaymentIsPaidAfterLoadingArriveToDestination"
+                        android:layout_toLeftOf="@+id/acEditShipment_btnLoadingIsGoingRound"
+                        android:layout_alignTop="@+id/acEditShipment_btnLoadingIsGoingRound"
+                        android:layout_alignBottom="@+id/acEditShipment_btnLoadingIsGoingRound"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:paddingRight="5dp"
+                        android:gravity="center|right"
+                        android:text="محموله به صورت رفت و برگشت"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomSwitchButton
+                        android:id="@+id/acEditShipment_btnHavingIntactTent"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/acEditShipment_btnLoadingIsGoingRound"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:sb_checked_color="@color/blue_500"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/acEditShipment_tvHavingIntactTent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/acEditShipment_btnLoadingIsGoingRound"
+                        android:layout_toLeftOf="@+id/acEditShipment_btnHavingIntactTent"
+                        android:layout_alignTop="@+id/acEditShipment_btnHavingIntactTent"
+                        android:layout_alignBottom="@+id/acEditShipment_btnHavingIntactTent"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:paddingRight="5dp"
+                        android:gravity="center|right"
+                        android:text="داشتن چادر سالم"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                </RelativeLayout>
+
+            </com.noavaran.system.vira.baryab.customviews.ExpandableLayout>
+
+            <RelativeLayout
+                android:id="@+id/acEditShipment_btnEdit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_below="@+id/acEditShipment_elMoreDetails"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/button_selector_1"
+                android:clickable="true">
+
+                <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                    android:id="@+id/acEditShipment_tvEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="ثبت"
+                    android:textColor="@color/blue_grey_800"
+                    android:textSize="@dimen/_12sdp"
+                    app:tvCustomFont="@string/baseFont" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

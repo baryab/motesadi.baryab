@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/acFindLocation_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorAccent"
+        android:titleTextAppearance="@color/white"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acFindLocation_btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:padding="@dimen/_10sdp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp"
+                app:tvCustomFont="@string/baseTextIconFont" />
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_toLeftOf="@+id/acFindLocation_btnBack"
+                android:gravity="right"
+                android:paddingTop="@dimen/_4sdp"
+                android:text="تعیین موقعیت"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/acFindLocation_view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/acFindLocation_toolbar"
+        android:background="@drawable/toolbar_dropshadow"/>
+
+    <include layout="@layout/content_find_location"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+    <Button
+        android:id="@+id/btn_setlocation"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_border_button"
+        android:text="ثبت موقعیت"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/_9sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

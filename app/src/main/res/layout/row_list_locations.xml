@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlLocations_btnDelete"
+        android:layout_width="@dimen/_34sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:clickable="true"
+        android:text=""
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/black_text_secondary"
+        app:tvCustomFont="@string/baseTextIconFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlLocations_btnEdit"
+        android:layout_width="@dimen/_34sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_toRightOf="@+id/rlLocations_btnDelete"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:clickable="true"
+        android:text=""
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/black_text_secondary"
+        app:tvCustomFont="@string/baseTextIconFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlLocations_tvPlaceName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_toRightOf="@+id/rlLocations_btnEdit"
+        android:layout_toLeftOf="@+id/rlLocations_tvPlaceType"
+        android:gravity="center|right"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="نام مکان"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlLocations_tvPlaceType"
+        android:layout_width="@dimen/_34sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="@dimen/_2sdp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="@dimen/_22sdp"
+        android:textColor="@color/green_500"
+        app:tvCustomFont="@string/baseTextIconFont"/>
+
+</RelativeLayout>

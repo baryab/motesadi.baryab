@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlCarType_tIcon"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_20sdp"
+        app:tvCustomFont="@string/baseTextIconFont" />
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlCarType_tvText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/rlCarType_tIcon"
+        android:gravity="center|right"
+        android:paddingRight="@dimen/_10sdp"
+        android:text="خاور"
+        android:textColor="@color/black_text"
+        android:textSize="@dimen/text_size_large"
+        app:tvCustomFont="@string/baseFont" />
+
+</RelativeLayout>

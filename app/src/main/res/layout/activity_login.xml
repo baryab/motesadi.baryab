@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noavaran.system.vira.baryab.activities.LoginActivity"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/acLogin_ivLogo"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_large"
+        android:src="@drawable/logo"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/acLogin_tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/acLogin_ivLogo"
+        android:layout_marginTop="@dimen/_minus2sdp"
+        android:padding="@dimen/padding_small"
+        android:text="به باریاب نو خوش آمدید"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="#d4d3d3"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomEditText
+        android:id="@+id/acLogin_etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/acLogin_tvWelcome"
+        android:layout_marginLeft="@dimen/margin_xxlarge"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:layout_marginRight="@dimen/margin_xxlarge"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingBottom="@dimen/padding_small"
+        android:background="@drawable/edittext_border"
+        android:gravity="center"
+        android:drawableLeft="@drawable/ic_phone_24dp"
+        android:drawableTint="@color/white"
+        android:drawablePadding="@dimen/padding_tiny"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:hint="شماره همراه خود را وارد نمایید"
+        android:textColorHint="#6f8b97"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"
+        app:etCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomButton
+        android:id="@+id/acLogin_btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/acLogin_etPhoneNumber"
+        android:layout_marginLeft="@dimen/margin_xxlarge"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_xxlarge"
+        android:background="@drawable/button_selector_1"
+        android:padding="@dimen/_5sdp"
+        android:text="ورود"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black_text_secondary"
+        app:btnCustomFont="@string/baseFont"/>
+
+</RelativeLayout>

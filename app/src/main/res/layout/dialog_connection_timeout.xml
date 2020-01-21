@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgSyncFailure_tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_large"
+        android:paddingRight="@dimen/padding_medium"
+        android:gravity="center"
+        android:text=""
+        android:textSize="@dimen/_70sdp"
+        android:textColor="@color/black_text_secondary"
+        app:tvCustomFont="@string/baseTextIconFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgSyncFailure_tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/dgSyncFailure_tvTitle"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_medium"
+        android:gravity="center"
+        android:text="ارتباط با سرور امکانپذیر نیست."
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dgSyncFailure_tvDesc"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_rectangle">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/dgSyncFailure_btnContact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="تماس با پشتیبانی"
+                android:textColor="@color/blue_700"
+                android:textSize="@dimen/text_size_medium"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_rectangle">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/dgSyncFailure_btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="تلاش مجدد"
+                android:textColor="@color/blue_700"
+                android:textSize="@dimen/text_size_medium"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

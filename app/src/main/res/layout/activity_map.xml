@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/acMaps_rlContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noavaran.system.vira.baryab.activities.MapsActivity">
+
+
+    <ir.map.sdk_map.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        mapbox:mapbox_cameraZoomMax="20"
+        mapbox:mapbox_cameraZoomMin="1" />
+
+
+    <com.noavaran.system.vira.baryab.customviews.CustomAutoCompleteTextView
+        android:id="@+id/acMaps_etSearchPlaces"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:background="@drawable/edittext_rectangle"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="@dimen/padding_small"
+        android:drawableTint="@color/black_text_secondary"
+        android:hint="@string/str_atv_places"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black_text_secondary"
+        android:textSize="@dimen/text_size_medium"
+        app:cactvCustomFont="@string/baseFont" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <!--android:layout_width="@dimen/_41sdp"-->
+        <!--android:layout_height="@dimen/_65sdp"-->
+        <ImageView
+            android:id="@+id/acMaps_ivPlaceChooserMarker"
+            android:layout_width="50dp"
+            android:layout_height="78dp"
+            android:layout_above="@+id/acMaps_vCenterLine"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_origin"
+            android:tag="origin" />
+
+        <View
+            android:id="@+id/acMaps_vCenterLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent" />
+
+    </RelativeLayout>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/acMaps_btnMyLocation"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_above="@+id/acMaps_flContainers"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:background="@drawable/circular_view_background_white_border_white"
+        android:gravity="center"
+        android:tag="off"
+        android:text=""
+        android:textColor="@color/black_text_secondary"
+        android:textSize="@dimen/_23sdp"
+        app:tvCustomFont="@string/baseTextIconFont" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/acMaps_flContainers"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <FrameLayout
+        android:id="@+id/acMaps_flContainers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

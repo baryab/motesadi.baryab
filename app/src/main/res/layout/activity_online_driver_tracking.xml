@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.noavaran.system.vira.baryab.activities.OnlineDriverTrackingActivity">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/acOnlineDriverTracking_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:apiKey="@string/google_maps_key" />
+
+    <RelativeLayout
+        android:id="@+id/acOnlineDriverTracking_rlDriverDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/white_text">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/grey_200"/>
+
+        <RelativeLayout
+            android:id="@+id/acOnlineDriverTracking_rlTitle"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acOnlineDriverTracking_btnContact"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="تماس با راننده"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/blue_600"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acOnlineDriverTracking_tvLoadingType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/acOnlineDriverTracking_btnContact"
+                android:paddingRight="@dimen/margin_small"
+                android:gravity="center|right"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="نوع بار"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black_text_secondary"
+                app:tvCustomFont="@string/baseFont"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/acOnlineDriverTracking_rlTitle"
+            android:background="@color/grey_200"/>
+
+        <ImageView
+            android:id="@+id/acOnlineDriverTracking_ivDriverPhoto"
+            android:layout_width="@dimen/_96sdp"
+            android:layout_height="@dimen/_96sdp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/acOnlineDriverTracking_rlTitle"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/acOnlineDriverTracking_tvDriverName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_below="@+id/acOnlineDriverTracking_rlTitle"
+            android:layout_toLeftOf="@+id/acOnlineDriverTracking_ivDriverPhoto"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:gravity="center|right"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="نام راننده"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/black_text_secondary"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/acOnlineDriverTracking_tvTruckType"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_below="@+id/acOnlineDriverTracking_tvDriverName"
+            android:layout_toLeftOf="@+id/acOnlineDriverTracking_ivDriverPhoto"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:gravity="center|right"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="نام ماشین راننده"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/black_text_secondary"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/acOnlineDriverTracking_tvTruckDetails"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_below="@+id/acOnlineDriverTracking_tvTruckType"
+            android:layout_toLeftOf="@+id/acOnlineDriverTracking_ivDriverPhoto"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:gravity="center|right"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="جزییات ماشین راننده"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/black_text_secondary"
+            app:tvCustomFont="@string/baseFont"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

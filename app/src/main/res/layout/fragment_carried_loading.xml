@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/frCarriedLoading_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:titleTextAppearance="@color/white"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="بارهای حمل شده"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbar_title_text_size"
+            app:tvCustomFont="@string/baseFont" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/frCarriedLoading_llTabButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frCarriedLoading_toolbar"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/frCarriedLoading_btnCarryingShipments"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_unselected"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="در حال حمل"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/text_size_medium"
+            app:tvCustomFont="@string/baseFont" />
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/frCarriedLoading_btnCarriedShipments"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_selected"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="به مقصد رسیده"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/text_size_medium"
+            app:tvCustomFont="@string/baseFont" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/frCarriedLoading_vDropShadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:layout_below="@+id/frCarriedLoading_llTabButtons"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <FrameLayout
+        android:id="@+id/frCarriedLoading_flContainers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frCarriedLoading_vDropShadow"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+</RelativeLayout>

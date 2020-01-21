@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:padding="@dimen/_5sdp"
+    android:background="@drawable/button_selector_6"
+    android:clickable="true">
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlCarringShipment_tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="تاریخ"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomImageView
+        android:id="@+id/rlCarringShipment_ivDate"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rlCarringShipment_tvDate"
+        android:layout_alignTop="@+id/rlCarringShipment_tvDate"
+        android:layout_alignBottom="@+id/rlCarringShipment_tvDate"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_calendar"
+        app:ivDrawableTint="@color/blue_500"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlCarringShipment_tvTruckType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/rlCarringShipment_ivDate"
+        android:layout_alignBottom="@+id/rlCarringShipment_ivDate"
+        android:layout_toRightOf="@+id/rlCarringShipment_ivDate"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="نام خودرو"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomImageView
+        android:id="@+id/rlCarringShipment_ivShipmentType"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rlCarringShipment_tvDate"
+        android:layout_marginTop="@dimen/margin_small"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_shipment"
+        app:ivDrawableTint="@color/blue_500"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlCarringShipment_tvShipmentType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlCarringShipment_tvDate"
+        android:layout_toLeftOf="@+id/rlCarringShipment_ivShipmentType"
+        android:layout_alignTop="@+id/rlCarringShipment_ivShipmentType"
+        android:layout_alignBottom="@+id/rlCarringShipment_ivShipmentType"
+        android:layout_marginRight="@dimen/margin_small"
+        android:gravity="center|right"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="نوع محموله"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <ImageView
+        android:id="@+id/rlCarringShipment_ivOrigin"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_19sdp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rlCarringShipment_tvShipmentType"
+        android:layout_marginTop="@dimen/margin_small"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_origin"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlCarringShipment_tvOrigin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlCarringShipment_tvShipmentType"
+        android:layout_toLeftOf="@+id/rlCarringShipment_ivOrigin"
+        android:layout_toRightOf="@+id/rlCarringShipment_ivDestination"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:gravity="center|right"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="مبدا"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <ImageView
+        android:id="@+id/rlCarringShipment_ivDestination"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_19sdp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/rlCarringShipment_tvShipmentType"
+        android:layout_marginTop="@dimen/margin_small"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_destination"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlCarringShipment_tvDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlCarringShipment_tvShipmentType"
+        android:layout_toLeftOf="@+id/rlCarringShipment_ivDestination"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:gravity="center|right"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="مقصد"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <ImageView
+        android:id="@+id/rlCarringShipment_ivDriverPhoto"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rlCarringShipment_ivOrigin"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_no_image_found"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlCarringShipment_tvDriverName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_below="@+id/rlCarringShipment_ivOrigin"
+        android:layout_alignTop="@+id/rlCarringShipment_ivDriverPhoto"
+        android:layout_toLeftOf="@+id/rlCarringShipment_ivDriverPhoto"
+        android:layout_toRightOf="@+id/rlCarringShipment_rlDriverRating"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:paddingLeft="@dimen/padding_tiny"
+        android:gravity="center|right"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="نام راننده"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <RelativeLayout
+        android:id="@+id/rlCarringShipment_rlDriverRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/rlCarringShipment_tvDriverName"
+        android:layout_alignBottom="@+id/rlCarringShipment_tvDriverName"
+        android:layout_below="@+id/rlCarringShipment_ivOrigin"
+        android:gravity="center">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomRatingBar
+            android:id="@+id/rlCarringShipment_rbDriverRating"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:isIndicator="true"
+            app:maxStars="5"
+            app:stars="0"
+            android:layoutDirection="ltr"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCarringShipment_rlPlateLicense"
+        android:layout_width="@dimen/_113sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rlCarringShipment_tvDriverName"
+        android:layout_alignBottom="@+id/rlCarringShipment_ivDriverPhoto"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:id="@+id/rlIranFlagLayout"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="#02218d">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_9sdp"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginRight="@dimen/_1sdp"
+                android:src="@drawable/ic_flag_iran"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_above="@+id/tvIranText"
+                android:gravity="left"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="I.R."
+                android:textSize="@dimen/_2sdp"
+                android:textColor="@color/white"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/tvIranText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="IRAN"
+                android:textSize="@dimen/_2sdp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/rlCarringShipment_tvPlateLicenseNumber"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rlIranFlagLayout"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:paddingTop="@dimen/_1sdp"
+            android:background="#edce01"
+            android:gravity="center"
+            android:text="111   ع   11 "
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/black"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <RelativeLayout
+            android:id="@+id/rlIranTextLayout"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rlCarringShipment_tvPlateLicenseNumber"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:padding="@dimen/_2sdp"
+            android:background="#edce01">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/tvIranTextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="ایـران"
+                android:textSize="@dimen/_2sdp"
+                android:textColor="@color/black"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/rlCarringShipment_tvPlateLicenseIranNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvIranTextLabel"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="11"
+                android:textSize="@dimen/_7sdp"
+                android:textColor="@color/black"
+                app:tvCustomFont="@string/baseFont"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlCarringShipment_btnContactRoDriver"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rlCarringShipment_rlPlateLicense"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_tiny"
+        android:background="@drawable/button_selector_2"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="تماس با راننده"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/white_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/rlCarringShipment_btnMoreDetails"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_toRightOf="@+id/rlCarringShipment_btnContactRoDriver"
+        android:layout_below="@+id/rlCarringShipment_rlPlateLicense"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_tiny"
+        android:background="@drawable/button_selector_2"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="جزئیات بیشتر"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/white_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+</RelativeLayout>

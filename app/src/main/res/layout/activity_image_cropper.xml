@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimaryDark">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/acImageCropper_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:titleTextAppearance="@color/white"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/acImageCropper_btnSave"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="تایید"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/white"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/acImageCropper_btnDiscard"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="صرفنظر"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/white"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/acImageCropper_tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center|right"
+            android:text="ویرایش عکس"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/white"
+            app:tvCustomFont="@string/baseFont"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <view
+        android:id="@+id/acImageCropper_civImage"
+        class="com.noavaran.system.vira.baryab.customviews.CropImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_x="0dip"
+        android:layout_y="0dip"
+        android:layout_below="@+id/acImageCropper_toolbar"
+        android:background="#55000000" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:orientation="horizontal">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/acImageCropper_btnSRotateLeft"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/button_selector_2"
+            android:clickable="true"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/_25sdp"
+            android:textColor="@color/white"
+            app:tvCustomFont="@string/baseTextIconFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/acImageCropper_btnSRotateRight"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:background="@drawable/button_selector_2"
+            android:clickable="true"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/_25sdp"
+            android:textColor="@color/white"
+            app:tvCustomFont="@string/baseTextIconFont"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

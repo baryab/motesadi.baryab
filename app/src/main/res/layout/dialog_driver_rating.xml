@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgDriverRating_tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:gravity="center|right"
+        android:text="نوع ماشین"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/blue_500"
+        app:tvCustomFont="@string/baseFont"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/dgDriverRating_ivDriverPhoto"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_below="@id/dgDriverRating_tvTitle"
+        android:src="@drawable/ic_profile"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgDriverRating_tvDriverName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_below="@+id/dgDriverRating_tvTitle"
+        android:layout_toLeftOf="@+id/dgDriverRating_ivDriverPhoto"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center|right"
+        android:text="نام راننده"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black_text"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgDriverRating_tvDriverCarType"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_below="@+id/dgDriverRating_tvDriverName"
+        android:layout_toLeftOf="@+id/dgDriverRating_ivDriverPhoto"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:gravity="center|right"
+        android:text="نوع ماشین"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black_text"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <RelativeLayout
+        android:id="@+id/dgDriverRating_rlPlateLicense"
+        android:layout_width="@dimen/_112sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dgDriverRating_tvDriverCarType"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:id="@+id/rlIranFlagLayout"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="#02218d">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:src="@drawable/ic_flag_iran"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_above="@+id/tvIranText"
+                android:gravity="left"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="I.R."
+                android:textSize="@dimen/_3sdp"
+                android:textColor="@color/white"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/tvIranText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="IRAN"
+                android:textSize="@dimen/_3sdp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgDriverRating_tvPlateLicenseNumber"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rlIranFlagLayout"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:paddingTop="@dimen/_1sdp"
+            android:background="#edce01"
+            android:gravity="center"
+            android:text="111   ع   11 "
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/black"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <RelativeLayout
+            android:id="@+id/rlIranTextLayout"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/dgDriverRating_tvPlateLicenseNumber"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="#edce01">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/tvIranTextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="ایـران"
+                android:textSize="@dimen/_3sdp"
+                android:textColor="@color/black"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/dgDriverRating_tvPlateLicenseIranNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvIranTextLabel"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="11"
+                android:textSize="@dimen/_8sdp"
+                android:textColor="@color/black"
+                app:tvCustomFont="@string/baseFont"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgDriverRating_tvDriverRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dgDriverRating_ivDriverPhoto"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:gravity="center"
+        android:lines="2"
+        android:maxLines="3"
+        android:text="به نحوه برخورد و عملکرد راننده از  1 تا 10  چه امتیازی میدهید"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black_text"
+        app:tvCustomFont="@string/baseFont" />
+
+    <RelativeLayout
+        android:id="@+id/dgDriverRating_rlDriverRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dgDriverRating_tvDriverRating"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:gravity="center">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomRatingBar
+            android:id="@+id/dgDriverRating_rbDriverRating"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_centerInParent="true"
+            android:isIndicator="true"
+            app:maxStars="5"
+            app:stars="0"
+            android:layoutDirection="ltr"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dgDriverRating_rlSignature"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_below="@+id/dgDriverRating_rlDriverRating"
+        android:background="@drawable/edittext_border_1"
+        android:padding="2dp"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium">
+
+        <ImageView
+            android:id="@+id/dgDriverRating_ivSignature"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_no_image_found"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:gravity="center"
+            android:text="صاحب امضا:"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/black_text_secondary"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgDriverRating_tvSignatureOwner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:gravity="center"
+            android:text="نام صاحب امضا"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/black_text_secondary"
+            app:tvCustomFont="@string/baseFont"/>
+
+    </RelativeLayout>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgDriverRating_btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/dgDriverRating_rlSignature"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:paddingTop="1dp"
+        android:clickable="true"
+        android:background="@drawable/button_selector_5"
+        android:gravity="center"
+        android:text="تایید"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"
+        app:tvCustomFont="@string/baseFont"/>
+
+</RelativeLayout>

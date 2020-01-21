@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dgGuidanceForObtainingApproval_rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgGuidanceForObtainingApproval_tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/padding_small"
+            android:gravity="center"
+            android:text="راهنمای اخذ تاییدیه از سازمان"
+            android:textColor="@color/blue_800"
+            android:textSize="@dimen/text_size_medium"
+            app:tvCustomFont="@string/baseFont" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dgGuidanceForObtainingApproval_rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dgGuidanceForObtainingApproval_rlToolbar"
+        android:padding="@dimen/padding_medium">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgGuidanceForObtainingApproval_tvMessage1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:gravity="center|right"
+            android:text="مدیران شرکت های حمل و نقلی که انجمن صنفی اعلام کرده است، در سیستم ثبت شده اند و با استفاده از شماره همراه خود می توانند وارد پنل شده و از قسمت متصدیان من، متصدیان شرکت های خود را وارد نمایند."
+            android:textColor="@color/black_text_secondary"
+            android:textSize="@dimen/text_size_medium"
+            app:tvCustomFont="@string/baseFont" />
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgGuidanceForObtainingApproval_tvMessage2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dgGuidanceForObtainingApproval_tvMessage1"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:gravity="center|right"
+            android:text="اگر شما متصدی عزیز امکان ورود را نداشتید، ابتدا توسط مدیر شرکت خود پیگیری نمایید و درصورتی که شماره همراه مدیر شرکت در سیستم تعریف نشده است با پشتیبانی تماس بگیرید."
+            android:textColor="@color/black_text_secondary"
+            android:textSize="@dimen/text_size_medium"
+            app:tvCustomFont="@string/baseFont" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dgGuidanceForObtainingApproval_rlContainer"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_rectangle">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/dgGuidanceForObtainingApproval_btnClose"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="بستن"
+                android:textColor="@color/blue_700"
+                android:textSize="@dimen/text_size_medium"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_rectangle">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/dgGuidanceForObtainingApproval_btnCall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="تماس با پشتیبانی"
+                android:textColor="@color/blue_700"
+                android:textSize="@dimen/text_size_medium"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

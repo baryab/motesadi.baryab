@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+
+    defaultConfig {
+        applicationId "com.noavaran.system.vira.baryab"
+        minSdkVersion 14
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [onesignal_app_id: "6ec6372e-27b2-47db-967c-ab9d146e9b41", onesignal_google_project_number: "REMOTE"]
+        multiDexEnabled true //این خط اضافه شده است
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'libs/jackson-core-asl-1.9.13.jar'
+        exclude 'libs/jackson-mapper-asl-1.9.13.jar'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+
+
+//    configurations {
+//        all*.exclude group: 'com.google.code.gson'
+//    }
+
+
+    useLibrary 'org.apache.http.legacy'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation files('libs/signalr-client-sdk.jar')
+    implementation files('libs/signalr-client-sdk-android.jar')
+//    implementation files('libs/gson-2.2.2.jar')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.core:core:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-analytics:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.3'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.8.8'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.8.8'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.8'
+    implementation 'com.github.satyan:sugar:1.5'
+    implementation 'com.onesignal:OneSignal:3.5.8@aar'
+    testImplementation 'junit:junit:4.12'
+
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:8.6.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.6.0'
+
+    implementation('ir.map:map-sdk:4.0.0') {
+        exclude module: 'com.google.code.gson'
+    }
+
+}

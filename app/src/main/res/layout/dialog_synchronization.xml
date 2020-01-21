@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.noavaran.system.vira.baryab.customviews.AVLoadingIndicatorView
+        android:id="@+id/dgSynchronization_alivAvi"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        style="@style/AVLoadingIndicatorView.Large"
+        android:visibility="visible"
+        app:indicatorName="BallSpinFadeLoaderIndicator"
+        app:indicatorColor="@color/colorAccent"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgSynchronization_tvNoInternetConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dgSynchronization_alivAvi"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="عدم دسترسی به اینترنت"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/red_500"
+        app:tvCustomFont="@string/baseFont"
+        android:visibility="invisible"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgSynchronization_tvSync"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/dgSynchronization_tvNoInternetConnection"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="در حال همگام سازی اطلاعات با سرور"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"
+        app:tvCustomFont="@string/baseFont"/>
+
+</RelativeLayout>

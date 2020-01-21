@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/dgNoInternetConnection_ivLogo"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/ic_no_internet_connection"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgNoInternetConnection_tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/dgNoInternetConnection_ivLogo"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="عدم اتصال به اینترنت"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/dgNoInternetConnection_tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/dgNoInternetConnection_tvTitle"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:paddingLeft="@dimen/padding_xlarge"
+        android:paddingRight="@dimen/padding_xlarge"
+        android:gravity="center"
+        android:text="اتصال شما به اینترنت برقرار نیست. برای استفاده از سرویس باریاب نو نیاز به اینترنت دارید."
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/black_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dgNoInternetConnection_tvHint"
+        android:weightSum="1"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/colorPrimaryDark">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgNoInternetConnection_btnWIFI"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="0.495"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="اینترنت    WIFI"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/white"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.005"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@color/white_dividers"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgNoInternetConnection_btnDATA"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="0.495"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="اینترنت موبایل"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/white"
+            app:tvCustomFont="@string/baseFont"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

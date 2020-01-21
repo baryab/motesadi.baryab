@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/frProfile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:titleTextAppearance="@color/white"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="خانه"
+                android:textSize="@dimen/toolbar_title_text_size"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:background="@drawable/toolbar_dropshadow"
+        android:layout_below="@+id/frProfile_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frProfile_toolbar"
+        android:gravity="center">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/frProfile_btnMyProfile"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/edittext_border"
+                    android:orientation="vertical">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/customTextView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_35sdp"
+                        app:tvCustomFont="@string/baseTextIconFont" />
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:text="مشخصات فردي"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/frProfile_btnShare"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/edittext_border"
+                    android:orientation="vertical">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/_35sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseTextIconFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:text="معرفی به دوستان"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/frProfile_btnQuestions"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/edittext_border"
+                    android:orientation="vertical">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/_35sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseTextIconFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="سوالات متداول"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/frProfile_btnAboutUs"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/edittext_border"
+                    android:orientation="vertical">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/_35sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseTextIconFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/customTextView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="درباره ما"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9sdp"
+                        app:tvCustomFont="@string/baseFont" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/frProfile_btnCriticsSuggestions"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/edittext_border"
+                    android:orientation="vertical">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_35sdp"
+                        app:tvCustomFont="@string/baseTextIconFont" />
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="انتقادات و پیشنهادات"
+                        android:textSize="@dimen/_8sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/frProfile_btnNotifications"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/edittext_border"
+                    android:orientation="vertical">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/_35sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseTextIconFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="اعلانات"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/frProfile_btnContactsUs"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/edittext_border"
+                    android:orientation="vertical">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:id="@+id/customTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_35sdp"
+                        app:tvCustomFont="@string/baseTextIconFont" />
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="تماس با ما"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/frProfile_btnLogout"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/edittext_border"
+                    android:orientation="vertical">
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/_35sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseTextIconFont"/>
+
+                    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="خروج از سیستم"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/white"
+                        app:tvCustomFont="@string/baseFont"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

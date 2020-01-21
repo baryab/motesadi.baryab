@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/acApplicantDrivers_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorAccent"
+        android:titleTextAppearance="@color/white"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="رانندگان متقاضی حمل این بار"
+                android:textColor="@color/white"
+                android:textSize="@dimen/toolbar_title_text_size"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/acApplicantDrivers_vDropShadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:layout_below="@+id/acApplicantDrivers_toolbar"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <RelativeLayout
+        android:id="@+id/acApplicantDrivers_rlNoItemFound"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_layout_no_item_found_height"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/acApplicantDrivers_vDropShadow"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/button_border"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomImageView
+            android:id="@+id/acApplicantDrivers_ivNoItemFound"
+            android:layout_width="@dimen/row_layout_no_item_found_image_width"
+            android:layout_height="@dimen/row_layout_no_item_found_image_width"
+            android:layout_toRightOf="@+id/acApplicantDrivers_tvNoItemFound"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_no_item_found"
+            app:ivDrawableTint="#adffff"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/acApplicantDrivers_tvNoItemFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="هیچ آیتمی یافت نشد"
+            android:textSize="@dimen/row_layout_no_item_found_text_size"
+            android:textColor="#adffff"
+            app:tvCustomFont="@string/baseFont"/>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/acApplicantDrivers_swipeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acApplicantDrivers_rlNoItemFound">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/acApplicantDrivers_rvMyLoadings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:scrollbars="vertical" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

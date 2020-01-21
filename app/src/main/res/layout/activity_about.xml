@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:noghteh="http://noghteh.ir"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.noavaran.system.vira.baryab.activities.AboutActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/acAbout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorAccent"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acAbout_btnBack"
+                android:layout_width="@dimen/toolbar_icon_view_width"
+                android:layout_height="@dimen/toolbar_icon_view_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/margin_small"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/toolbar_icon_text_size"
+                app:tvCustomFont="@string/baseTextIconFont" />
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acAbout_tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/acAbout_btnBack"
+                android:layout_alignTop="@+id/acAbout_btnBack"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_toLeftOf="@+id/acAbout_btnBack"
+                android:gravity="center|right"
+                android:paddingTop="@dimen/_4sdp"
+                android:text="درباره ما"
+                android:textColor="@color/white"
+                android:textSize="@dimen/toolbar_title_text_size"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acAbout_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acAbout_tvAbout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="right"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:text="درباره ما - باریاب نو"
+                android:textColor="@color/blue_500"
+                android:textSize="@dimen/title"
+                app:tvCustomFont="@string/baseFont" />
+
+            <com.noavaran.system.vira.baryab.customviews.JustifiedTextView
+                android:id="@+id/acAbout_tvAbout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acAbout_tvAbout1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                app:jtvCustomFont="@string/baseFont"
+                noghteh:text="جابه‌جایی در مورد انسان به‌دلیل نیازهای تجاری، اجتماعی، تفریحی یا فرهنگی انجام می‌گیرد اما درمورد کالا، علت اصلی جابه‌جایی، عدم انطباق مکانی محل تولید و مصرف کالابا یکدیگر می‌باشد به همین دلیل نیاز جابه‌جایی انسان و کالا از یک نقطه به نقطه دیگر موجب به‌وجود آمدن واژه‌ای جدید به نام حمل و نقل از گذشته‌های بسیار دور گردید که با گذشت زمان و پیشرفت تکنولوژی با غلبه بر طبیعت و موانع آن، باعث کاهش هزینه و کاهش زمان حمل و نقل گردیده است. زندگی انسان، همواره با این تفکر همراه بوده که چگونه می‌توان با صرف نیروی کمتر بار بیشتری را جابه‌جا نمود یا به عبارت دیگر انسان همواره به فکر راحتی و سرعت در جابه‌جایی خود و کالا بوده است،زیرا که صرفه‌جویی در زمان موجب صرفه‌جویی در هزینه‌های جابه‌جایی کالا و در نتیجه بهبود وضعیت اقتصادی خواهد شد. از قدیمی ترین راه های جابجایی کالا،حمل ونقل جاده ای است که از جهت صرفه جویی در زمان،هزینه و نیز سرعت عمل نسبت به دیگر روش های حمل ونقل کالا ارجعیت دارد؛از این رو حمل و نقل جاده ای با حابجایی مناسب سالانه میلیون ها تن کالا و ترانزیت نقش مهمی را در حمل ونقل درون مرزی وبین المللی ایفا می کند."
+                noghteh:textColor="@color/white"
+                noghteh:textSize="@dimen/_6sdp" />
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acAbout_tvAbout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acAbout_tvAbout2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="right"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:text="سه دلیل اصلی تمایل روزافزون جهانی به حمل‌ونقل جاده‌ای:"
+                android:textColor="@color/blue_300"
+                android:textSize="@dimen/subtitle"
+                app:tvCustomFont="@string/baseFont" />
+
+            <com.noavaran.system.vira.baryab.customviews.JustifiedTextView
+                android:id="@+id/acAbout_tvAbout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acAbout_tvAbout3"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="right"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                app:tvCustomFont="@string/baseFont"
+                noghteh:text="١- در سال‌های اخیر با ساخت شبکه راه‌های مدرن و کارایی وسایل نقلیه، حمل‌ونقل جاده‌ای به صورت انقلابی وسیع کارآیی مهم تری یافته است. "
+                noghteh:textColor="@color/white"
+                noghteh:textSize="@dimen/_6sdp" />
+
+            <com.noavaran.system.vira.baryab.customviews.JustifiedTextView
+                android:id="@+id/acAbout_tvAbout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acAbout_tvAbout4"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="right"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                app:tvCustomFont="@string/baseFont"
+                noghteh:text="٢- با توسعه اقتصادی ملت‌ها اهمیت هزینه حمل‌ونقل کاهش یافته و توجه بیشتر به سمت سرویس بهتر می‌باشد."
+                noghteh:textColor="@color/white"
+                noghteh:textSize="@dimen/_6sdp" />
+
+            <com.noavaran.system.vira.baryab.customviews.JustifiedTextView
+                android:id="@+id/acAbout_tvAbout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acAbout_tvAbout5"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="right"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                app:tvCustomFont="@string/baseFont"
+                noghteh:text="٣- اهمیت عامل زمان درخصوص کالاهای فسادپذیر، رونق و اهمیت حمل‌ونقل جاده‌ای را روزافزون می کند."
+                noghteh:textColor="@color/white"
+                noghteh:textSize="@dimen/_6sdp" />
+
+            <com.noavaran.system.vira.baryab.customviews.JustifiedTextView
+                android:id="@+id/acAbout_tvAbout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acAbout_tvAbout6"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="10dp"
+                app:jtvCustomFont="@string/baseFont"
+                noghteh:text="در همین راستا ؛ما و همکاران متخصصمان در سایت تخصصی اعلام بار باریاب نو؛با هدف اطلاع رسانی و ارائه خدمات نوین در زمینه حمل و نقل بار وکالا،با بهره گیری از بروزترین و سریع ترین امکانات حمل ونقل و ایجاد یک بازار بزرگ آنلاین، شما را در جهت دستیابی به هر آنچه که برای حمل سریع و آسان کالای موردنظر خود دارید،یاری می کنیم. در بازار بزرگ آنلاین سایت باریاب نو ،شما به سرعت پس از اعلام بار خود پیشنهادات زیادی از سوی رانندگان که خدمات با کیفیت و مقرون به صرفه ای را ارائه می دهند،دریافت خواهید کرد. ما در سایت باریاب نو؛با استفاده از ارتباطات الکترونیکی وتکنولوژی امروزه ،حمل ونقل کالا را راحتر می کنیم ،بدین صورت که با اعلام بار،دردسر بار برای حمل توسط کامیون متناسب وهمچنین پیدا کردن بار برای کامیون خالی از بین می رود و کارهایی که در گذشته در باب حمل ونقل به سختی انجام می شد و وقت گیر بود،فقط با یک کلیک انجام خواهد شد. در این سایت روزانه و به صورت لحظه ای اعلام بار و اطلاعات مربوط به اعلام های خود را خواهید دید و همچنین به صورت آنی به اطلاعات جامع و مورد نیاز در مورد حمل و نقل دست خواهید یافت. به همین منطور فقط کافی است که شما اعلام بار خود را در سایت ثبت کرده. مهمترین استراتژی های این سایت،جلب اعتماد و آرامش خاطر شماست."
+                noghteh:textColor="@color/white"
+                noghteh:textSize="@dimen/_6sdp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

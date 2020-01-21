@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">باریاب نو</string>
+
+    <string name="baseFont">fonts/IRANSansMobile.ttf</string>
+    <string name="baseTextIconFont">fonts/materialdesignicons-webfont.ttf</string>
+
+    <string name="pick_image_intent_text">عکس محموله خود را انتخاب نمایید</string>
+
+    <string name="saving_image">در حال ذخیره عکس</string>
+    <string name="preparing_card">در حال آماده سازی کارت</string>
+    <string name="no_storage_card">کارت ذخیره یافت نشد</string>
+    <string name="not_enough_space">فضای کافی برای ذخیره کافی نسیت</string>
+
+    <string name="str_atv_places">جستجو</string>
+    <string name="star">*</string>
+    <string name="bar_locations">تعيين محل بارگیری و تخليه</string>
+    <string name="map_btn">نقشه</string>
+    <string name="not_recognize_places">مبدا و مقصد نامعلوم</string>
+    <string name="determine_ُsource">تعيين مبداء:</string>
+
+    <string-array name="city">
+        <item name="chooseCity">استان</item>
+        <item name="tehran">تهران</item>
+        <item name="rasht">رشت</item>
+    </string-array>
+
+
+    <string-array name="town">
+        <item name="chooseTown"> شهر</item>
+        <item name="damavand">دماوند</item>
+        <item name="firozkoh">فیروزکوه</item>
+    </string-array>
+</resources>

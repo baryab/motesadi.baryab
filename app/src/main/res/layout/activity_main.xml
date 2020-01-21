@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/acMain_rlMainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noavaran.system.vira.baryab.activities.MainActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/acMain_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/acMain_spaceTabLayout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/acMain_spaceTabLayout"
+        android:background="#2678909c"/>
+
+    <com.noavaran.system.vira.baryab.customviews.DachshundTabLayout
+        android:id="@+id/acMain_spaceTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:tabBackground="@drawable/tab_color_selector"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabGravity="fill"
+        app:ddIndicatorHeight="0dp"
+        app:tabTextColor="@color/white"
+        app:tabSelectedTextColor="@color/white"/>
+
+</RelativeLayout>

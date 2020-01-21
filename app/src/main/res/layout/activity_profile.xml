@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noavaran.system.vira.baryab.activities.ProfileActivity"
+    android:background="@color/colorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/acProfile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:background="@color/colorAccent"
+        android:titleTextAppearance="@color/white"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="مشخصات فردی"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textColor="@color/white"
+            app:tvCustomFont="@string/baseFont"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:background="@drawable/toolbar_dropshadow"
+        android:layout_below="@+id/acProfile_toolbar"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomCircleImageView
+        android:id="@+id/acProfile_ivProfileImage"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/acProfile_toolbar"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:src="@drawable/ic_profile"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FFFFFF"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/acProfile_tvFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/acProfile_toolbar"
+        android:layout_toLeftOf="@+id/acProfile_ivProfileImage"
+        android:layout_toRightOf="@+id/acProfile_rlUserRating"
+        android:layout_alignTop="@+id/acProfile_ivProfileImage"
+        android:layout_marginLeft="@dimen/margin_tiny"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:gravity="center|right"
+        android:text="نام و نام خانوادگی"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <RelativeLayout
+        android:id="@+id/acProfile_rlUserRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/acProfile_tvFullName"
+        android:layout_alignBottom="@+id/acProfile_tvFullName"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:gravity="center">
+
+        <RatingBar
+            android:id="@+id/acProfile_rbUserRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:progressTint="#fbbc0c"
+            android:secondaryProgressTintMode="src_atop"
+            android:secondaryProgressTint="@color/grey_500"
+            android:progressBackgroundTint="@color/grey_500"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:rating="1"/>
+
+    </RelativeLayout>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/acProfile_btnAddNewPhoto"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/acProfile_tvFullName"
+        android:layout_toLeftOf="@+id/acProfile_ivProfileImage"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:background="@drawable/button_selector_1"
+        android:gravity="center"
+        android:text="افزودن عکس"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/black_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/acProfile_btnSave"
+        android:layout_below="@+id/acProfile_ivProfileImage"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:padding="@dimen/padding_small">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_tvNationalCode"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center|right"
+                android:text="کد ملی"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_etNationalCode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/acProfile_tvNationalCode"
+                android:lines="1"
+                android:maxLines="1"
+                android:gravity="center|left"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white_text_secondary"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_tvMobileNumber"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acProfile_tvNationalCode"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center|right"
+                android:text="شماره همراه"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_etMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/acProfile_tvMobileNumber"
+                android:layout_alignBaseline="@+id/acProfile_tvMobileNumber"
+                android:lines="1"
+                android:maxLines="1"
+                android:gravity="center|left"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white_text_secondary"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_tvCompanyName"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acProfile_tvMobileNumber"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center|right"
+                android:text="نام شرکت حمل و نقل"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_etCompanyName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/acProfile_tvCompanyName"
+                android:layout_alignBaseline="@+id/acProfile_tvCompanyName"
+                android:lines="1"
+                android:maxLines="1"
+                android:gravity="center|left"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white_text_secondary"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_tvCompanyChairMan"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acProfile_tvCompanyName"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center|right"
+                android:text="مدیر عامل شرکت"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_etCompanyChairMan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/acProfile_tvCompanyChairMan"
+                android:layout_alignBaseline="@+id/acProfile_tvCompanyChairMan"
+                android:lines="1"
+                android:maxLines="1"
+                android:gravity="center|left"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white_text_secondary"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_tvCompanyRegisterationNumber"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acProfile_tvCompanyChairMan"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center|right"
+                android:text="شماره ثبت شرکت"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_etCompanyRegisterationNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/acProfile_tvCompanyRegisterationNumber"
+                android:layout_alignBaseline="@+id/acProfile_tvCompanyRegisterationNumber"
+                android:lines="1"
+                android:maxLines="1"
+                android:gravity="center|left"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white_text_secondary"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_tvCompanyPhoneNumber"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acProfile_tvCompanyRegisterationNumber"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center|right"
+                android:text="تلفن ثابت شرکت"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_etCompanyPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/acProfile_tvCompanyPhoneNumber"
+                android:layout_alignBaseline="@+id/acProfile_tvCompanyPhoneNumber"
+                android:lines="1"
+                android:maxLines="1"
+                android:gravity="center|left"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white_text_secondary"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_tvCompanyAddress"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acProfile_tvCompanyPhoneNumber"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center|right"
+                android:text="آدرس شرکت"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acProfile_etCompanyAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_below="@+id/acProfile_tvCompanyAddress"
+                android:gravity="top|right"
+                android:lines="3"
+                android:maxLines="5"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/white_text_secondary"
+                app:tvCustomFont="@string/baseFont"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/acProfile_btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:background="@drawable/button_selector_1"
+        android:gravity="center"
+        android:text="ذخیره تغییرات"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+</RelativeLayout>

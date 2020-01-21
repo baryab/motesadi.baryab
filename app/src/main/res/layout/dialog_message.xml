@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dgMessage_rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgMessage_tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_small"
+            android:gravity="center|right"
+            android:text="عنوان"
+            android:textColor="@color/blue_800"
+            android:textSize="@dimen/text_size_medium"
+            app:tvCustomFont="@string/baseFont" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dgMessage_rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dgMessage_rlToolbar"
+        android:padding="@dimen/padding_small">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgMessage_tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="متن پیام"
+            android:textColor="@color/black_text_secondary"
+            android:textSize="@dimen/text_size_medium"
+            app:tvCustomFont="@string/baseFont" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dgMessage_rlContainer"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_rectangle">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/dgMessage_btnConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingTop="@dimen/padding_tiny"
+                android:gravity="center"
+                android:text="تایید"
+                android:textColor="@color/blue_700"
+                android:textSize="@dimen/text_size_medium"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rlMyLodaing_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/button_selector_6"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/rlMyLodaing_ivLoadingImage"
+        android:layout_width="@dimen/_86sdp"
+        android:layout_height="@dimen/_86sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/margin_small"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_no_image_found"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/rlMyLodaing_ivLoadingImage"
+        android:layout_alignTop="@+id/rlMyLodaing_ivLoadingImage"
+        android:layout_alignBottom="@+id/rlMyLodaing_ivLoadingImage"
+        android:layout_marginRight="@dimen/margin_small">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/rlMyLodaing_tvDriverCount"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="@dimen/_2sdp"
+            android:background="@drawable/circular_view_background_cyan_border_black_trasparent"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/white"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/rlMyLodaing_tvCarType"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/rlMyLodaing_tvDriverCount"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:gravity="center|right"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="نوع ماشین"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/white_text"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/rlMyLodaing_tvLoadingType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rlMyLodaing_tvCarType"
+            android:gravity="center|right"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="نوع بار"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/white_text"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/rlMyLodaing_tvLoadingFareType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rlMyLodaing_tvLoadingType"
+            android:gravity="center|right"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="نوع کرایه بار"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/white_text"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/rlMyLodaing_tvLoadingFare"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rlMyLodaing_tvLoadingFareType"
+            android:layout_below="@+id/rlMyLodaing_tvLoadingType"
+            android:layout_alignTop="@+id/rlMyLodaing_tvLoadingFareType"
+            android:layout_alignBottom="@+id/rlMyLodaing_tvLoadingFareType"
+            android:layout_marginRight="2dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:gravity="center|right"
+            android:text="قیمت"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/blue_300"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/rlMyLodaing_tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/rlMyLodaing_tvLoadingType"
+            android:layout_alignTop="@+id/rlMyLodaing_tvLoadingFareType"
+            android:layout_alignBottom="@+id/rlMyLodaing_tvLoadingFareType"
+            android:layout_toLeftOf="@+id/rlMyLodaing_tvLoadingFare"
+            android:layout_marginRight="@dimen/margin_tiny"
+            android:gravity="center|left"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="تاریخ بارگیری"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/white_text"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <View
+            android:id="@+id/rlMyLodaing_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rlMyLodaing_tvLoadingFareType"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:layout_marginBottom="@dimen/margin_tiny"
+            android:background="@color/colorAccent"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomImageView
+            android:id="@+id/rlMyLodaing_ivOrigin"
+            android:layout_width="@dimen/_11sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rlMyLodaing_divider"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_origin"
+            app:ivDrawableTint="@color/green_500"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/rlMyLodaing_tvOrigin"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_19sdp"
+            android:layout_below="@+id/rlMyLodaing_divider"
+            android:layout_toLeftOf="@+id/rlMyLodaing_ivOrigin"
+            android:layout_toRightOf="@+id/rlMyLodaing_ivDestination"
+            android:gravity="center|right"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="مبدا"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/white_text"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomImageView
+            android:id="@+id/rlMyLodaing_ivDestination"
+            android:layout_width="@dimen/_11sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_below="@+id/rlMyLodaing_divider"
+            android:layout_toRightOf="@+id/rlMyLodaing_tvDestination"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_origin"
+            app:ivDrawableTint="@color/red_500"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/rlMyLodaing_tvDestination"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_19sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/rlMyLodaing_divider"
+            android:gravity="center|right"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="مقصد"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/white_text"
+            app:tvCustomFont="@string/baseFont"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

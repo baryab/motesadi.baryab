@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/acSplash_rootContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noavaran.system.vira.baryab.activities.SplashActivity"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/acSplash_ivBanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_140sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/splash"/>
+
+    <RelativeLayout
+        android:id="@+id/acSplash_rlAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/acSplash_ivBanner"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:gravity="center">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/acSplash_tvBaryab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="بـــــاریـاب"
+            android:textSize="@dimen/_25sdp"
+            android:textColor="#fffefd"
+            app:tvCustomFont="@string/baseFont"/>
+
+
+    </RelativeLayout>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/acSplash_rlAppName"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="10dp"
+        android:text="نسخه متصدیان"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="#f7fb8e"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <RelativeLayout
+        android:id="@+id/acSplash_pbLoading"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="#33000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acSplash_tvLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="در حال دریافت اطلاعات از سرور"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
+
+            <ProgressBar
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

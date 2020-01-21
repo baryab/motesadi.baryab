@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/dgCarTypeChooser_rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgCarTypeChooser_tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_medium"
+            android:gravity="center|right"
+            android:text="انتخاب نوع ماشین"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/colorAccent"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgCarTypeChooser_tvFragmentName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/dgCarTypeChooser_tvTitle"
+            android:paddingRight="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_medium"
+            android:gravity="center|right"
+            android:text=""
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/black_text_secondary"
+            app:tvCustomFont="@string/baseFont"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgCarTypeChooser_btnBack"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/dgCarTypeChooser_tvTitle"
+            android:layout_alignBottom="@+id/dgCarTypeChooser_tvTitle"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:text=""
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/black_text_secondary"
+            app:tvCustomFont="@string/baseTextIconFont"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/dgCarTypeChooser_flContainers"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_below="@+id/dgCarTypeChooser_rlToolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/dgCarTypeChooser_flContainers">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/dgCarTypeChooser_btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingRight="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_medium"
+            android:gravity="center|right"
+            android:clickable="true"
+            android:text="انصراف"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/colorAccent"
+            app:tvCustomFont="@string/baseFont"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

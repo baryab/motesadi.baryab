@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    android:background="@color/colorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_origin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:titleTextAppearance="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acOrigin_btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/_10sdp"
+                android:clickable="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp"
+                app:tvCustomFont="@string/baseTextIconFont" />
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_toLeftOf="@+id/acOrigin_btnBack"
+                android:gravity="right"
+                android:paddingTop="@dimen/_4sdp"
+                android:text="تعیین مبدأ"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                app:tvCustomFont="@string/baseFont" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/acOrigin_view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/toolbar_origin"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <ScrollView
+        android:id="@+id/acOrigin_scroll"
+        android:layout_below="@+id/acOrigin_view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/acOrigin_lyt_map"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/ic_chevron_left"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="انتخاب کنید"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                    android:layout_width="@dimen/_220sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:gravity="center|right"
+                    android:paddingRight="5dp"
+                    android:text="انتخاب محدوده از روی نقشه"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:tvCustomFont="@string/baseFont" />
+
+            </LinearLayout>
+
+            <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                android:id="@+id/acOrigin_no_destinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/acOrigin_lyt_map"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|right"
+                android:paddingRight="15dp"
+                android:lines="1"
+                android:text="مبدا و مقصد نامعلوم"
+                android:textColor="@color/blue_300"
+                android:textSize="13dp"
+                android:visibility="gone"
+                app:tvCustomFont="@string/baseFont" />
+
+            <View
+                android:id="@+id/acOrigin_view_lyt_origin"
+                android:layout_width="380dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_below="@+id/acOrigin_no_destinition"
+                android:background="@drawable/toolbar_dropshadow" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/acOrigin_rcSelectState"
+                android:layout_below="@+id/acOrigin_view_lyt_origin"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

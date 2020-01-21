@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/frCarriedShipment_rlNoItemFound"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/button_border"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <com.noavaran.system.vira.baryab.customviews.CustomImageView
+            android:id="@+id/frCarriedShipment_ivNoItemFound"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_toRightOf="@+id/frCarriedShipment_tvNoItemFound"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_no_item_found"
+            app:ivDrawableTint="#adffff"/>
+
+        <com.noavaran.system.vira.baryab.customviews.CustomTextView
+            android:id="@+id/frCarriedShipment_tvNoItemFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="هیچ آیتمی یافت نشد"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="#adffff"
+            app:tvCustomFont="@string/baseFont"/>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/frCarriedShipment_swipeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frCarriedShipment_rlNoItemFound">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/frCarriedShipment_rvMyLoadings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small"
+            android:scrollbars="vertical" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

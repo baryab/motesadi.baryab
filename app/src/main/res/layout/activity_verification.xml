@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noavaran.system.vira.baryab.activities.VerificationActivity"
+    android:background="@color/colorPrimary">
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/acVerification_tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:padding="@dimen/padding_medium"
+        android:gravity="center"
+        android:text="تا لحظاتی دیگر یک پیامک به شما ارسال می شود، لطفا کد تایید را وارد نمایید"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="#d4d3d3"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomEditText
+        android:id="@+id/acVerification_etCode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/acVerification_tvMessage"
+        android:layout_marginLeft="@dimen/margin_xxlarge"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginRight="@dimen/margin_xxlarge"
+        android:padding="@dimen/padding_small"
+        android:background="@drawable/edittext_border"
+        android:gravity="center"
+        android:maxLength="6"
+        android:inputType="number"
+        android:hint="کد تایید را اینجا وارد نمایید"
+        android:textColorHint="#6f8b97"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"
+        app:etCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomButton
+        android:id="@+id/acVerification_btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/acVerification_etCode"
+        android:layout_marginLeft="@dimen/margin_xxlarge"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_xxlarge"
+        android:background="@drawable/button_selector_1"
+        android:padding="5dp"
+        android:text="تایید"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/black_text_secondary"
+        app:btnCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/acVerification_btnRequestCodeAgain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/acVerification_btnConfirm"
+        android:layout_marginLeft="@dimen/margin_xxlarge"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:layout_marginRight="@dimen/margin_xxlarge"
+        android:gravity="center"
+        android:text="ارسال مجدد کد تایید"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white_text_secondary"
+        app:tvCustomFont="@string/baseFont"/>
+
+    <com.noavaran.system.vira.baryab.customviews.CustomTextView
+        android:id="@+id/acVerification_tvCountDownTimer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/acVerification_btnRequestCodeAgain"
+        android:layout_marginLeft="@dimen/margin_xxlarge"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginRight="@dimen/margin_xxlarge"
+        android:gravity="center"
+        android:text="مدت زمان باقیمانده جهت دریافت کد تایید : 00:30"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"
+        app:tvCustomFont="@string/baseFont"
+        android:visibility="gone"/>
+
+</RelativeLayout>
