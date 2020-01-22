@@ -84,6 +84,7 @@
                     android:textColor="@color/blue_300"
                     android:textSize="20dp" />
 
+
                 <com.noavaran.system.vira.baryab.customviews.CustomTextView
                     android:id="@+id/frNewLoad_tvLocationHint"
                     android:layout_width="match_parent"
