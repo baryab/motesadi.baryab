@@ -48,46 +48,109 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.noavaran.system.vira.baryab.customviews.CustomTextView
-                android:id="@+id/acEditShipment_tvLocation"
+            <LinearLayout
+                android:id="@+id/lyt_origin"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_34sdp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/acEditShipment_btnLocation"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/_5sdp"
                 android:paddingRight="@dimen/_5sdp"
-                android:gravity="center|right"
-                android:text="تعيين محل بارگیری و تخليه"
-                android:textSize="@dimen/_12sdp"
-                android:textColor="@color/white"
-                app:tvCustomFont="@string/baseFont"/>
+                android:gravity="right"
+                android:orientation="horizontal">
 
-            <com.noavaran.system.vira.baryab.customviews.CustomTextView
-                android:id="@+id/acEditShipment_btnLocation"
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_34sdp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
+                <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="انتخاب کنید"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:tvCustomFont="@string/baseFont" />
+
+                <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="45dp"
+                    android:gravity="center|right"
+                    android:text="تعیین محل بارگیری"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:tvCustomFont="@string/baseFont" />
+
+                <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                    android:id="@+id/frNewLoad_tvLocationHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/frNewLoad_tvLocation"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center|left"
+                    android:lines="1"
+                    android:paddingRight="15dp"
+                    android:text="مبدا نامعلوم"
+                    android:textColor="@color/blue_300"
+                    android:textSize="13dp"
+                    android:visibility="gone"
+                    app:tvCustomFont="@string/baseFont" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_lyt_origin"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="1dp"
                 android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/lyt_origin"
+                android:background="@drawable/toolbar_dropshadow" />
+            .0
+
+            <LinearLayout
+                android:id="@+id/lyt_destinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_lyt_origin"
                 android:layout_marginRight="@dimen/_5sdp"
-                android:background="@drawable/button_selector_1"
-                android:gravity="center"
-                android:clickable="true"
-                android:text="نقشه"
-                android:textSize="@dimen/_11sdp"
-                android:textColor="@color/blue_grey_800"
-                app:tvCustomFont="@string/baseFont"/>
+                android:paddingRight="@dimen/_5sdp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                    android:id="@+id/frNewLoad_btnLocation_destinition"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="انتخاب کنید"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:tvCustomFont="@string/baseFont" />
+
+                <com.noavaran.system.vira.baryab.customviews.CustomTextView
+                    android:id="@+id/frNewLoad_tvLocation_destinition"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="45dp"
+                    android:gravity="center|right"
+                    android:text="تعیین محل تخلیه"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:tvCustomFont="@string/baseFont" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_lyt_destinition"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/lyt_destinition"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/toolbar_dropshadow" />
 
             <com.noavaran.system.vira.baryab.customviews.CustomTextView
                 android:id="@+id/acEditShipment_tvLocationHint"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_15sdp"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/acEditShipment_tvLocation"
+                android:layout_below="@+id/view_lyt_destinition"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_5sdp"

@@ -76,6 +76,7 @@
                 android:orientation="horizontal"
                 android:gravity="right"
                 android:paddingBottom="5dp"
+                android:paddingRight="@dimen/_5sdp"
                 android:paddingTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -87,7 +88,6 @@
                     android:layout_marginRight="60dp"
                     android:layout_marginTop="5dp"
                     app:srcCompat="@drawable/ic_chevron_left"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text="انتخاب کنید"
                     android:textColor="@color/white"
@@ -96,7 +96,6 @@
                 <com.noavaran.system.vira.baryab.customviews.CustomTextView
                     android:layout_width="@dimen/_220sdp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="25dp"
                     android:layout_marginTop="5dp"
                     android:paddingBottom="@dimen/_10sdp"
                     android:gravity="center|right"
@@ -128,7 +127,7 @@
 
             <View
                 android:id="@+id/acDestinition_view_lyt_origin"
-                android:layout_width="380dp"
+                android:layout_width="@dimen/_300sdp"
                 android:layout_height="1dp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_below="@+id/acDestinition_no_destinition"

@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -51,6 +52,7 @@ import java.util.Date;
 import java.util.List;
 
 public class EditShipmentActivity extends BaseActivity implements EditShipmentDelegate.View {
+    private LinearLayout lyt_Origin, lyt_Destinition;
     private CustomTextView btnLocation;
     private CustomTextView btnCarChoose;
     private CustomTextView tvCarChooseHint;
@@ -113,8 +115,10 @@ public class EditShipmentActivity extends BaseActivity implements EditShipmentDe
     }
 
     private void findViews() {
-        this.btnLocation = findViewById(R.id.acEditShipment_btnLocation);
+//        this.btnLocation = findViewById(R.id.acEditShipment_btnLocation);
 
+        this.lyt_Origin = findViewById(R.id.lyt_origin);
+        this.lyt_Destinition = findViewById(R.id.lyt_destinition);
         this.btnCarChoose = findViewById(R.id.acEditShipment_btnCarChoose);
         this.tvCarChooseHint = findViewById(R.id.acEditShipment_tvCarChooseHint);
 
@@ -180,12 +184,25 @@ public class EditShipmentActivity extends BaseActivity implements EditShipmentDe
     }
 
     private void setViewsListeners() {
-        btnLocation.setOnClickListener(new OnSingleClickListener() {
+        lyt_Origin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSingleClick(View v) {
-                ActivitiesHelpers.getInstance(EditShipmentActivity.this).gotoActivityMaps(EditShipmentActivity.this, controller.getPlaceInfo());
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), OriginActivity.class));
             }
         });
+        lyt_Destinition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), DestinationActivity.class));
+            }
+        });
+
+//        btnLocation.setOnClickListener(new OnSingleClickListener() {
+//            @Override
+//            public void onSingleClick(View v) {
+//                ActivitiesHelpers.getInstance(EditShipmentActivity.this).gotoActivityMaps(EditShipmentActivity.this, controller.getPlaceInfo());
+//            }
+//        });
 
         btnCarChoose.setOnClickListener(new OnSingleClickListener() {
             @Override

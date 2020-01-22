@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.noavaran.system.vira.baryab.R;
+import com.noavaran.system.vira.baryab.fragments.NewLoadFragment;
 
 public class DestinationActivity extends AppCompatActivity {
 
@@ -31,5 +32,11 @@ public class DestinationActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        return;
     }
 }
