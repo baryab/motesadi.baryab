@@ -52,7 +52,6 @@
                 android:orientation="horizontal">
 
                 <com.noavaran.system.vira.baryab.customviews.CustomTextView
-                    android:id="@+id/frNewLoad_btnLocation"
                     android:layout_width="100dp"
                     android:layout_height="45dp"
                     android:layout_marginLeft="10dp"
@@ -64,7 +63,6 @@
                     app:tvCustomFont="@string/baseFont" />
 
                 <com.noavaran.system.vira.baryab.customviews.CustomTextView
-                    android:id="@+id/frNewLoad_tvLocation"
                     android:layout_width="@dimen/_200sdp"
                     android:layout_height="45dp"
                     android:paddingRight="@dimen/_5sdp"
@@ -75,7 +73,6 @@
                     app:tvCustomFont="@string/baseFont" />
 
                 <com.noavaran.system.vira.baryab.customviews.CustomTextView
-                    android:id="@+id/frNewLoad_tvLocationMandatoryIcon"
                     android:layout_width="@dimen/_14sdp"
                     android:layout_height="@dimen/_34sdp"
                     android:layout_alignParentRight="true"

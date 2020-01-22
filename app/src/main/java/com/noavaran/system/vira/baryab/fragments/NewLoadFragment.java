@@ -64,9 +64,6 @@ public class NewLoadFragment extends BaseFragment implements NewLoadDelegate.Vie
 
     private ScrollView svContainer;
 
-    private CustomTextView btnLocation;
-    private CustomTextView tvLocationHint;
-
     private CustomTextView btnCarChoose;
     private CustomTextView tvCarChooseHint;
 
@@ -162,8 +159,6 @@ public class NewLoadFragment extends BaseFragment implements NewLoadDelegate.Vie
         this.lytDestinition = this.rootView.findViewById(R.id.lyt_destinition);
 
         this.svContainer = this.rootView.findViewById(R.id.frNewLoad_svContainer);
-        this.btnLocation = this.rootView.findViewById(R.id.frNewLoad_btnLocation);
-        this.tvLocationHint = this.rootView.findViewById(R.id.frNewLoad_tvLocationHint);
         this.btnCarChoose = this.rootView.findViewById(R.id.frNewLoad_btnCarChoose);
         this.tvCarChooseHint = this.rootView.findViewById(R.id.frNewLoad_tvCarChooseHint);
         this.elCarLength = this.rootView.findViewById(R.id.frNewLoad_elCarLength);
@@ -563,11 +558,6 @@ public class NewLoadFragment extends BaseFragment implements NewLoadDelegate.Vie
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    @Override
-    public void setLocationHint(String location) {
-        tvLocationHint.setVisibility(View.VISIBLE);
-        tvLocationHint.setText(location);
-    }
 
     @Override
     public void setCarChooserHint(String carTypeFullname) {
@@ -580,13 +570,18 @@ public class NewLoadFragment extends BaseFragment implements NewLoadDelegate.Vie
     }
 
     @Override
+    public CustomTextView getLocationHint() {
+        return null;
+    }
+
+    @Override
     public ScrollView getSvContainer() {
         return svContainer;
     }
 
     @Override
-    public CustomTextView getLocationHint() {
-        return tvLocationHint;
+    public void setLocationHint(String location) {
+
     }
 
     @Override
