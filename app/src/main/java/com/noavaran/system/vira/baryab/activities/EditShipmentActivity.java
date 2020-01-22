@@ -52,7 +52,6 @@ import java.util.List;
 
 public class EditShipmentActivity extends BaseActivity implements EditShipmentDelegate.View {
     private CustomTextView btnLocation;
-    private CustomTextView tvLocationHint;
     private CustomTextView btnCarChoose;
     private CustomTextView tvCarChooseHint;
     private ExpandableLayout elCarLength;
@@ -115,7 +114,6 @@ public class EditShipmentActivity extends BaseActivity implements EditShipmentDe
 
     private void findViews() {
         this.btnLocation = findViewById(R.id.acEditShipment_btnLocation);
-        this.tvLocationHint = findViewById(R.id.acEditShipment_tvLocationHint);
 
         this.btnCarChoose = findViewById(R.id.acEditShipment_btnCarChoose);
         this.tvCarChooseHint = findViewById(R.id.acEditShipment_tvCarChooseHint);
@@ -581,9 +579,10 @@ public class EditShipmentActivity extends BaseActivity implements EditShipmentDe
         controller.setTruckTypeInfo(new TruckTypeInfo(truckType.getTruckTypeId(), truckType.getName(), truckType.getPid(), truckType.getFullName(), truckType.getMinLength(), truckType.getMaxLength(), truckType.getMinWidth(), truckType.getMaxWidth(), truckType.getMinHeight(), truckType.getMaxHeight(), truckType.isRoof(), truckType.isHasChild()));
     }
 
+
     @Override
     public CustomTextView getTvLocationHint() {
-        return tvLocationHint;
+        return null;
     }
 
     @Override

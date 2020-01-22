@@ -288,7 +288,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_toLeftOf="@+id/frNewLoad_tvLoadingType"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:gravity="right|center"
                 android:inputType="text"
                 android:padding="@dimen/padding_small"
@@ -350,7 +350,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_toLeftOf="@+id/frNewLoad_tvLoadingWeightHint"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:gravity="right|center"
                 android:inputType="numberDecimal"
                 android:maxLength="5"
@@ -370,7 +370,7 @@
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:layout_marginRight="@dimen/margin_small"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:clickable="true">
 
                 <RelativeLayout
@@ -492,7 +492,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_toLeftOf="@+id/frNewLoad_tvLoadingFareHint"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:gravity="right|center"
                 android:inputType="number"
                 android:maxLength="10"
@@ -525,7 +525,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_marginRight="@dimen/margin_small"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:gravity="right"
                 android:inputType="textMultiLine"
                 android:lines="5"
@@ -612,7 +612,7 @@
                 android:layout_marginLeft="@dimen/margin_small"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:layout_marginRight="@dimen/margin_small"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:clickable="true">
 
                 <RelativeLayout
@@ -665,7 +665,7 @@
                         android:layout_marginLeft="@dimen/margin_medium"
                         android:layout_marginTop="@dimen/margin_small"
                         android:layout_marginRight="@dimen/margin_medium"
-                        android:background="@drawable/edittext_border"
+                        android:background="@drawable/button_border_color_accent"
                         android:clickable="true">
 
                         <RelativeLayout
@@ -743,7 +743,7 @@
                                 android:layout_width="@dimen/_105sdp"
                                 android:layout_height="@dimen/_34sdp"
                                 android:layout_toLeftOf="@+id/frNewLoad_tvCarLengthFrom"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:hint="متر"
                                 android:inputType="numberDecimal"
@@ -773,7 +773,7 @@
                                 android:layout_height="@dimen/_34sdp"
                                 android:layout_alignParentLeft="true"
                                 android:layout_marginLeft="@dimen/margin_medium"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:hint="متر"
                                 android:inputType="numberDecimal"
@@ -797,7 +797,7 @@
                         android:layout_marginLeft="@dimen/margin_medium"
                         android:layout_marginTop="@dimen/margin_medium"
                         android:layout_marginRight="@dimen/margin_medium"
-                        android:background="@drawable/edittext_border"
+                        android:background="@drawable/button_border_color_accent"
                         android:clickable="true">
 
                         <RelativeLayout
@@ -876,7 +876,7 @@
                                 android:layout_width="@dimen/_105sdp"
                                 android:layout_height="@dimen/_34sdp"
                                 android:layout_toLeftOf="@+id/frNewLoad_tvCarWidthFrom"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:hint="متر"
                                 android:inputType="numberDecimal"
@@ -906,7 +906,7 @@
                                 android:layout_height="@dimen/_34sdp"
                                 android:layout_alignParentLeft="true"
                                 android:layout_marginLeft="@dimen/_10sdp"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:hint="متر"
                                 android:inputType="numberDecimal"
@@ -930,7 +930,7 @@
                         android:layout_marginLeft="@dimen/margin_medium"
                         android:layout_marginTop="@dimen/margin_medium"
                         android:layout_marginRight="@dimen/margin_medium"
-                        android:background="@drawable/edittext_border"
+                        android:background="@drawable/button_border_color_accent"
                         android:clickable="true">
 
                         <RelativeLayout
@@ -1008,7 +1008,7 @@
                                 android:layout_width="@dimen/_105sdp"
                                 android:layout_height="@dimen/_34sdp"
                                 android:layout_toLeftOf="@+id/frNewLoad_tvCarHeightFrom"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:hint="متر"
                                 android:inputType="numberDecimal"
@@ -1038,7 +1038,7 @@
                                 android:layout_height="@dimen/_34sdp"
                                 android:layout_alignParentLeft="true"
                                 android:layout_marginLeft="@dimen/_10sdp"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:hint="متر"
                                 android:inputType="numberDecimal"
@@ -1092,7 +1092,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="@dimen/margin_medium"
                         android:layout_toLeftOf="@+id/frNewLoad_tvSpendingWarehouseHint"
-                        android:background="@drawable/edittext_border"
+                        android:background="@drawable/button_border_color_accent"
                         android:gravity="right|center"
                         android:inputType="number"
                         android:maxLength="10"
@@ -1141,11 +1141,11 @@
                         android:layout_alignBottom="@+id/frNewLoad_tvLoadingTime"
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="@dimen/margin_medium"
-                        android:background="@drawable/button_selector_1"
+                        android:background="@drawable/button_selector_5"
                         android:clickable="true"
                         android:gravity="center"
                         android:text="تعیین"
-                        android:textColor="@color/blue_grey_800"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/text_size_medium"
                         app:tvCustomFont="@string/baseFont" />
 
@@ -1188,11 +1188,11 @@
                         android:layout_alignBottom="@+id/frNewLoad_tvDetermineDischargeTime"
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="@dimen/margin_medium"
-                        android:background="@drawable/button_selector_1"
+                        android:background="@drawable/button_selector_5"
                         android:clickable="true"
                         android:gravity="center"
                         android:text="تعیین"
-                        android:textColor="@color/blue_grey_800"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/text_size_medium"
                         app:tvCustomFont="@string/baseFont" />
 
@@ -1234,11 +1234,11 @@
                         android:layout_alignBottom="@+id/frNewLoad_tvDetermineExpirationTime"
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="@dimen/margin_medium"
-                        android:background="@drawable/button_selector_1"
+                        android:background="@drawable/button_selector_5"
                         android:clickable="true"
                         android:gravity="center"
                         android:text="تعیین"
-                        android:textColor="@color/blue_grey_800"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/text_size_medium"
                         app:tvCustomFont="@string/baseFont" />
 

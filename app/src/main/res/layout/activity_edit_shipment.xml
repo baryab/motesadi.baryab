@@ -124,12 +124,12 @@
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_5sdp"
-                android:background="@drawable/button_selector_1"
+                android:background="@drawable/button_selector_5"
                 android:gravity="center"
                 android:clickable="true"
                 android:text="تعیین"
                 android:textSize="@dimen/_11sdp"
-                android:textColor="@color/blue_grey_800"
+                android:textColor="@color/white"
                 app:tvCustomFont="@string/baseFont"/>
 
             <com.noavaran.system.vira.baryab.customviews.CustomTextView
@@ -175,7 +175,7 @@
                 android:layout_alignBottom="@+id/acEditShipment_tvLoadingType"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:padding="@dimen/_5sdp"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:gravity="right|center"
                 android:inputType="text"
                 android:hint="مثل بشکه خالی"
@@ -223,7 +223,7 @@
                 android:layout_alignBottom="@+id/acEditShipment_tvLoadingWeight"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:padding="@dimen/_5sdp"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:gravity="right|center"
                 android:inputType="numberDecimal"
                 android:maxLength="9"
@@ -243,7 +243,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_5sdp"
                 android:clickable="true"
-                android:background="@drawable/edittext_border">
+                android:background="@drawable/button_border_color_accent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -350,7 +350,7 @@
                 android:layout_alignBottom="@+id/acEditShipment_tvLoadingFare"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:padding="5dp"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:gravity="right|center"
                 android:inputType="number"
                 android:maxLength="10"
@@ -382,7 +382,7 @@
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_5sdp"
                 android:padding="5dp"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:gravity="right"
                 android:inputType="textMultiLine"
                 android:lines="5"
@@ -408,11 +408,11 @@
                     android:layout_height="@dimen/_34sdp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
-                    android:background="@drawable/button_selector_1"
+                    android:background="@drawable/button_selector_5"
                     android:clickable="true"
                     android:gravity="center"
                     android:text="افزودن"
-                    android:textColor="@color/blue_grey_800"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_12sdp"
                     app:tvCustomFont="@string/baseFont" />
 
@@ -469,7 +469,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_5sdp"
                 android:clickable="true"
-                android:background="@drawable/edittext_border">
+                android:background="@drawable/button_border_color_accent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -523,7 +523,7 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_5sdp"
                         android:clickable="true"
-                        android:background="@drawable/edittext_border">
+                        android:background="@drawable/button_border_color_accent">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -535,12 +535,13 @@
                                 android:layout_height="match_parent"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentRight="true"
-                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginRight="12dp"
                                 android:gravity="center|right"
                                 android:text="طول مناسب"
-                                android:textSize="@dimen/_12sdp"
                                 android:textColor="@color/white"
-                                app:tvCustomFont="@string/baseFont"/>
+                                android:textSize="@dimen/_12sdp"
+                                app:tvCustomFont="@string/baseFont" />
 
                             <com.noavaran.system.vira.baryab.customviews.CustomTextView
                                 android:id="@+id/acEditShipment_btnCarLengthArrowDropDown"
@@ -600,7 +601,7 @@
                                 android:layout_height="@dimen/_34sdp"
                                 android:layout_toLeftOf="@+id/acEditShipment_tvCarLengthFrom"
                                 android:padding="5dp"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:inputType="numberDecimal"
                                 android:hint="متر"
@@ -630,7 +631,7 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_marginLeft="@dimen/_10sdp"
                                 android:padding="5dp"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:inputType="numberDecimal"
                                 android:hint="متر"
@@ -654,7 +655,7 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_5sdp"
                         android:clickable="true"
-                        android:background="@drawable/edittext_border">
+                        android:background="@drawable/button_border_color_accent">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -731,7 +732,7 @@
                                 android:layout_height="@dimen/_34sdp"
                                 android:layout_toLeftOf="@+id/acEditShipment_tvCarWidthFrom"
                                 android:padding="5dp"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:inputType="numberDecimal"
                                 android:hint="متر"
@@ -761,7 +762,7 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_marginLeft="@dimen/_10sdp"
                                 android:padding="5dp"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:inputType="numberDecimal"
                                 android:hint="متر"
@@ -785,7 +786,7 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_5sdp"
                         android:clickable="true"
-                        android:background="@drawable/edittext_border">
+                        android:background="@drawable/button_border_color_accent">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -862,7 +863,7 @@
                                 android:layout_height="@dimen/_34sdp"
                                 android:layout_toLeftOf="@+id/acEditShipment_tvCarHeightFrom"
                                 android:padding="5dp"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:inputType="numberDecimal"
                                 android:hint="متر"
@@ -892,7 +893,7 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_marginLeft="15dp"
                                 android:padding="5dp"
-                                android:background="@drawable/edittext_border"
+                                android:background="@drawable/button_border_color_accent"
                                 android:gravity="center"
                                 android:inputType="numberDecimal"
                                 android:hint="متر"
@@ -944,7 +945,7 @@
                         android:layout_toLeftOf="@+id/acEditShipment_tvSpendingWarehouseHint"
                         android:layout_marginLeft="@dimen/_5sdp"
                         android:padding="5dp"
-                        android:background="@drawable/edittext_border"
+                        android:background="@drawable/button_border_color_accent"
                         android:gravity="right|center"
                         android:inputType="number"
                         android:maxLength="10"
@@ -991,12 +992,12 @@
                         android:layout_alignTop="@+id/acEditShipment_tvLoadingTimeHint"
                         android:layout_alignBottom="@+id/acEditShipment_tvLoadingTimeHint"
                         android:layout_marginLeft="@dimen/_5sdp"
-                        android:background="@drawable/button_selector_1"
+                        android:background="@drawable/button_selector_5"
                         android:gravity="center"
                         android:clickable="true"
                         android:text="تعیین"
                         android:textSize="@dimen/_12sdp"
-                        android:textColor="@color/blue_grey_800"
+                        android:textColor="@color/white"
                         app:tvCustomFont="@string/baseFont"/>
 
                     <com.noavaran.system.vira.baryab.customviews.CustomTextView
@@ -1038,12 +1039,12 @@
                         android:layout_alignTop="@+id/acEditShipment_tvDetermineDischargeTime"
                         android:layout_alignBottom="@+id/acEditShipment_tvDetermineDischargeTime"
                         android:layout_marginLeft="@dimen/_5sdp"
-                        android:background="@drawable/button_selector_1"
+                        android:background="@drawable/button_selector_5"
                         android:gravity="center"
                         android:clickable="true"
                         android:text="تعیین"
                         android:textSize="@dimen/_12sdp"
-                        android:textColor="@color/blue_grey_800"
+                        android:textColor="@color/white"
                         app:tvCustomFont="@string/baseFont"/>
 
                     <com.noavaran.system.vira.baryab.customviews.CustomTextView
@@ -1084,12 +1085,12 @@
                         android:layout_alignTop="@+id/acEditShipment_tvDetermineExpirationTime"
                         android:layout_alignBottom="@+id/acEditShipment_tvDetermineExpirationTime"
                         android:layout_marginLeft="@dimen/_5sdp"
-                        android:background="@drawable/button_selector_1"
+                        android:background="@drawable/button_selector_5"
                         android:gravity="center"
                         android:clickable="true"
                         android:text="تعیین"
                         android:textSize="@dimen/_12sdp"
-                        android:textColor="@color/blue_grey_800"
+                        android:textColor="@color/white"
                         app:tvCustomFont="@string/baseFont"/>
 
                     <com.noavaran.system.vira.baryab.customviews.CustomSwitchButton
@@ -1186,7 +1187,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:background="@drawable/button_selector_1"
+                android:background="@drawable/button_selector_5"
                 android:clickable="true">
 
                 <com.noavaran.system.vira.baryab.customviews.CustomTextView
@@ -1197,7 +1198,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="ثبت"
-                    android:textColor="@color/blue_grey_800"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_12sdp"
                     app:tvCustomFont="@string/baseFont" />
 
