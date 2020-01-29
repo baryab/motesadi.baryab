@@ -52,14 +52,15 @@
                 android:id="@+id/lyt_origin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_5sdp"
                 android:paddingRight="@dimen/_5sdp"
                 android:gravity="right"
                 android:orientation="horizontal">
 
                 <com.noavaran.system.vira.baryab.customviews.CustomTextView
-                    android:layout_width="100dp"
-                    android:layout_height="45dp"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_45sdp"
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="انتخاب کنید"
@@ -68,9 +69,9 @@
                     app:tvCustomFont="@string/baseFont" />
 
                 <com.noavaran.system.vira.baryab.customviews.CustomTextView
-                    android:layout_width="@dimen/_200sdp"
+                    android:layout_width="@dimen/_210sdp"
                     android:layout_height="45dp"
-                    android:gravity="center|right"
+                    android:gravity="right"
                     android:text="تعیین محل بارگیری"
                     android:textColor="@color/white"
                     android:textSize="15dp"
@@ -117,7 +118,7 @@
 
                 <com.noavaran.system.vira.baryab.customviews.CustomTextView
                     android:id="@+id/frNewLoad_btnLocation_destinition"
-                    android:layout_width="100dp"
+                    android:layout_width="@dimen/_100sdp"
                     android:layout_height="45dp"
                     android:gravity="center"
                     android:text="انتخاب کنید"
@@ -127,7 +128,7 @@
 
                 <com.noavaran.system.vira.baryab.customviews.CustomTextView
                     android:id="@+id/frNewLoad_tvLocation_destinition"
-                    android:layout_width="@dimen/_200sdp"
+                    android:layout_width="@dimen/_210sdp"
                     android:layout_height="45dp"
                     android:gravity="center|right"
                     android:text="تعیین محل تخلیه"
@@ -419,7 +420,8 @@
                 android:maxLength="10"
                 android:textColorHint="@color/white_text_secondary"
                 android:textSize="@dimen/_12sdp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                app:tvCustomFont="@string/baseFont"/>
 
             <com.noavaran.system.vira.baryab.customviews.CustomTextView
                 android:id="@+id/acEditShipment_tvDescription"

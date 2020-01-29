@@ -7,11 +7,13 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Handler;
+
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,8 +25,10 @@ import com.noavaran.system.vira.baryab.activities.ImageCropperActivity;
 import com.noavaran.system.vira.baryab.activities.MainActivity;
 import com.noavaran.system.vira.baryab.activities.controllers.MapController;
 import com.noavaran.system.vira.baryab.adapters.LoadingFareTypeAdapter;
+import com.noavaran.system.vira.baryab.adapters.ProvinceTypeAdapter;
 import com.noavaran.system.vira.baryab.customviews.CustomTextView;
 import com.noavaran.system.vira.baryab.database.models.LoadingFareType;
+import com.noavaran.system.vira.baryab.database.models.ProvinceType;
 import com.noavaran.system.vira.baryab.database.models.TruckType;
 import com.noavaran.system.vira.baryab.dialogs.CarTypeChooserDialog;
 import com.noavaran.system.vira.baryab.dialogs.MessageDialog;
@@ -54,31 +58,33 @@ import java.util.List;
 public class NewLoadController implements NewLoadDelegate.Controller {
 
 
-    private final FragmentActivity            fragmentActivity;
-    private final NewLoadDelegate.View        view;
-    private       NewLoadModel                model;
-    private       CarTypeChooserDialog        carTypeChooserDialog;
-    private       List<PlacesInfo>            listPlacesInfos;
-    private       String                      strPlacesInfo;
-    private       TruckTypeInfo               truckTypeInfo;
-    private       LoadingFareTypeAdapter      loadingFareTypeAdapter;
-    private       List<LoadingFareType>       listLoadingFareType;
-    private       List<LoadingFareTypeInfo>   listLoadingFareTypeInfo;
-    private       int                         loadingFareTypeId = 1;
-    private       PersianDatePickerDialog     persianDatePicker;
-    private       Typeface                    iranSansTypeface;
-    private       PersianCalendar             initDate;
-    private       boolean                     isShipmentGoingRound;
-    private       boolean                     refundAfterArrival;
-    private       boolean                     havingWellTent;
-    private       List<LoadingFareType>       loadingFareType;
-
+    private final FragmentActivity fragmentActivity;
+    private final NewLoadDelegate.View view;
+    private NewLoadModel model;
+    private CarTypeChooserDialog carTypeChooserDialog;
+    private List<PlacesInfo> listPlacesInfos;
+    private String strPlacesInfo;
+    private TruckTypeInfo truckTypeInfo;
+    private ProvinceTypeAdapter provinceTypeAdapter;
+    private List<ProvinceType> listprovinceType;
+    private LoadingFareTypeAdapter loadingFareTypeAdapter;
+    private List<LoadingFareType> listLoadingFareType;
+    private List<LoadingFareTypeInfo> listLoadingFareTypeInfo;
+    private ProvinceType provinceType;
+    private int loadingFareTypeId = 1;
+    private PersianDatePickerDialog persianDatePicker;
+    private Typeface iranSansTypeface;
+    private PersianCalendar initDate;
+    private boolean isShipmentGoingRound;
+    private boolean refundAfterArrival;
+    private boolean havingWellTent;
+    private List<LoadingFareType> loadingFareType;
 
 
     public NewLoadController(FragmentActivity fragmentActivity, NewLoadDelegate.View view) {
         this.fragmentActivity = fragmentActivity;
-        this.view             = view;
-        this.model            = new NewLoadModel();
+        this.view = view;
+        this.model = new NewLoadModel();
 
         initComponents();
         initRecyclerView();
@@ -105,6 +111,11 @@ public class NewLoadController implements NewLoadDelegate.Controller {
     }
 
     private void initRecyclerView() {
+        listprovinceType = ProvinceType.listAll(ProvinceType.class);
+        for (int i = 0; i < listprovinceType.size(); i++) {
+
+        }
+
         listLoadingFareType = LoadingFareType.listAll(LoadingFareType.class);
         listLoadingFareTypeInfo = new ArrayList<>();
 
@@ -189,7 +200,9 @@ public class NewLoadController implements NewLoadDelegate.Controller {
         try {
             ObjectMapper mapper = new ObjectMapper();
             listPlacesInfos = mapper.readValue(this.strPlacesInfo, TypeFactory.defaultInstance().constructCollectionType(List.class, PlacesInfo.class));
-            view.setLocationHint("مبدا : " + listPlacesInfos.get(0).getAddressInfo().getProvince() + " " + listPlacesInfos.get(0).getAddressInfo().getCity() + "   مقصد : " + listPlacesInfos.get(listPlacesInfos.size() - 1).getAddressInfo().getProvince() + " " + listPlacesInfos.get(listPlacesInfos.size() - 1).getAddressInfo().getCity() + "");
+            view.setLocationHint("مبدا : " + listPlacesInfos.get(0).getAddressInfo().getProvince() + " " +
+                    listPlacesInfos.get(0).getAddressInfo().getCity() + "   مقصد : " + listPlacesInfos.get(listPlacesInfos.size() - 1).getAddressInfo().getProvince() +
+                    " " + listPlacesInfos.get(listPlacesInfos.size() - 1).getAddressInfo().getCity() + "");
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -269,7 +282,8 @@ public class NewLoadController implements NewLoadDelegate.Controller {
 
             try {
                 String[] splitTruckType = view.getCarChooseHint().getText().toString().replace(" ، ", "/").split("/");
-                String strTruckType = splitTruckType.length == 1 ? splitTruckType[0] : splitTruckType.length == 2 ? splitTruckType[0] + "/" + splitTruckType[1] : splitTruckType[0] + "/" + splitTruckType[1] + "/" + splitTruckType[2];
+                String strTruckType = splitTruckType.length == 1 ? splitTruckType[0] : splitTruckType.length == 2 ? splitTruckType[0] + "/" + splitTruckType[1] : splitTruckType[0] + "/" +
+                        splitTruckType[1] + "/" + splitTruckType[2];
                 List<TruckType> listTruckType = Select.from(TruckType.class).where(Condition.prop("full_name").eq(strTruckType.replace(" ، ", "/"))).list();
                 int truckTypeID = listTruckType.get(0).getTruckTypeId();
                 float carLengthFrom = view.getEditTextCarLengthFrom().getText().toString().isEmpty() ? 0 : Float.parseFloat(view.getEditTextCarLengthFrom().getText().toString());

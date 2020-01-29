@@ -21,6 +21,7 @@ import com.noavaran.system.vira.baryab.R;
 import com.noavaran.system.vira.baryab.activities.MainActivity;
 import com.noavaran.system.vira.baryab.customviews.CustomTextView;
 import com.noavaran.system.vira.baryab.database.models.LoadingFareType;
+import com.noavaran.system.vira.baryab.database.models.ProvinceType;
 import com.noavaran.system.vira.baryab.database.models.TruckType;
 import com.noavaran.system.vira.baryab.helpers.InternetHelper;
 import com.noavaran.system.vira.baryab.utils.okhttp.OkHttpHelper;
@@ -151,6 +152,15 @@ public class SynchronizationDialog extends Dialog {
 
                 TruckType truckType = new TruckType(id, name, pid, fullName, minLength, maxLength, minWidth, maxWidth, minHeight, maxHeight, isRoof, hasChild);
                 truckType.save();
+
+            }
+
+            //Getting Province Type
+            ProvinceType.deleteAll(ProvinceType.class);
+            JSONArray jaProvinceType = result.optJSONObject("data").optJSONArray("province");
+            for (int i = 0; i < jaProvinceType.length(); i++) {
+                ProvinceType provinceType = new ProvinceType(jaProvinceType.optJSONObject(i).optInt("Id"), jaProvinceType.optJSONObject(i).optString("cityName"));
+                provinceType.save();
             }
 
             dismiss();

@@ -24,7 +24,7 @@
             android:layout_height="match_parent">
 
             <com.noavaran.system.vira.baryab.customviews.CustomTextView
-                android:id="@+id/acOrigin_btnBack"
+                android:id="@+id/acRouting_btnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginRight="@dimen/_5sdp"
-                android:layout_toLeftOf="@+id/acOrigin_btnBack"
+                android:layout_toLeftOf="@+id/acRouting_btnBack"
                 android:gravity="right"
                 android:paddingTop="@dimen/_4sdp"
                 android:text="تعیین مبدأ"
@@ -56,15 +56,15 @@
     </androidx.appcompat.widget.Toolbar>
 
     <View
-        android:id="@+id/acOrigin_view_toolbar"
+        android:id="@+id/acRouting_view_toolbar"
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:layout_below="@+id/toolbar_origin"
         android:background="@drawable/toolbar_dropshadow" />
 
     <ScrollView
-        android:id="@+id/acOrigin_scroll"
-        android:layout_below="@+id/acOrigin_view_toolbar"
+        android:id="@+id/acRouting_scroll"
+        android:layout_below="@+id/acRouting_view_toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -73,7 +73,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:id="@+id/acOrigin_lyt_map"
+                android:id="@+id/acRouting_lyt_map"
                 android:orientation="horizontal"
                 android:gravity="right"
                 android:paddingBottom="5dp"
@@ -109,11 +109,11 @@
             </LinearLayout>
 
             <com.noavaran.system.vira.baryab.customviews.CustomTextView
-                android:id="@+id/acOrigin_no_destinition"
+                android:id="@+id/acRouting_no_destinition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/acOrigin_lyt_map"
+                android:layout_below="@+id/acRouting_lyt_map"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
@@ -127,16 +127,16 @@
                 app:tvCustomFont="@string/baseFont" />
 
             <View
-                android:id="@+id/acOrigin_view_lyt_origin"
+                android:id="@+id/acRouting_view_lyt_origin"
                 android:layout_width="@dimen/_300sdp"
                 android:layout_height="1dp"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_below="@+id/acOrigin_no_destinition"
+                android:layout_below="@+id/acRouting_no_destinition"
                 android:background="@drawable/toolbar_dropshadow" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/acOrigin_rcSelectState"
-                android:layout_below="@+id/acOrigin_view_lyt_origin"
+                android:id="@+id/acRouting_rcSelectState"
+                android:layout_below="@+id/acRouting_view_lyt_origin"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:paddingRight="@dimen/_5sdp"
                 android:paddingLeft="@dimen/_5sdp"

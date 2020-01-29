@@ -652,10 +652,10 @@
                 android:layout_marginLeft="@dimen/margin_medium"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:layout_marginRight="@dimen/margin_medium"
-                android:background="@drawable/edittext_border"
+                android:background="@drawable/button_border_color_accent"
                 android:gravity="right"
                 android:padding="5dp"
-                android:textColor="@color/white_text_secondary"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_size_medium"
                 app:tvCustomFont="@string/baseFont" />
 

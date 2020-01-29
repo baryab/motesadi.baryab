@@ -52,7 +52,7 @@ public class LoadingFareTypeAdapter extends RecyclerView.Adapter<LoadingFareType
         public LoadingFareTypeHolder(View view) {
             super(view);
 
-            rbLoadingFareType = (CustomRadioButton) view.findViewById(R.id.rlLoadingFareType_rbLoadingFareTypeTon);
+            rbLoadingFareType = view.findViewById(R.id.rlLoadingFareType_rbLoadingFareTypeTon);
 
             View.OnClickListener clickListener = new View.OnClickListener() {
                 @Override

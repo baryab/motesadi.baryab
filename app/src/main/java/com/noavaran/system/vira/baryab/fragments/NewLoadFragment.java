@@ -22,20 +22,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.QuickContactBadge;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.Toast;
 
 import com.noavaran.system.vira.baryab.AppController;
 import com.noavaran.system.vira.baryab.BaseFragment;
 import com.noavaran.system.vira.baryab.Configuration;
 import com.noavaran.system.vira.baryab.R;
-import com.noavaran.system.vira.baryab.activities.AboutActivity;
 import com.noavaran.system.vira.baryab.activities.DestinationActivity;
 import com.noavaran.system.vira.baryab.activities.ImageCropperActivity;
 import com.noavaran.system.vira.baryab.activities.MapsActivity;
-import com.noavaran.system.vira.baryab.activities.OriginActivity;
+import com.noavaran.system.vira.baryab.activities.RoutingActivity;
 import com.noavaran.system.vira.baryab.customviews.CustomEditText;
 import com.noavaran.system.vira.baryab.customviews.CustomSwitchButton;
 import com.noavaran.system.vira.baryab.customviews.CustomTextView;
@@ -46,7 +43,6 @@ import com.noavaran.system.vira.baryab.dialogs.MessageDialog;
 import com.noavaran.system.vira.baryab.fragments.controllers.NewLoadController;
 import com.noavaran.system.vira.baryab.fragments.delegates.NewLoadDelegate;
 import com.noavaran.system.vira.baryab.listeners.OnSingleClickListener;
-import com.noavaran.system.vira.baryab.map.ir.MapActivity;
 import com.noavaran.system.vira.baryab.utils.ImagePicker;
 import com.noavaran.system.vira.baryab.utils.ImageUtil;
 import com.noavaran.system.vira.baryab.utils.PersianDateUtil;
@@ -189,18 +185,18 @@ public class NewLoadFragment extends BaseFragment implements NewLoadDelegate.Vie
         this.btnChooseLoadingPhoto = this.rootView.findViewById(R.id.frNewLoad_btnChooseLoadingPhoto);
         this.ivLoadingPhotoPreview = this.rootView.findViewById(R.id.frNewLoad_ivLoadingPhotoPreview);
         this.elMoreDetails = this.rootView.findViewById(R.id.frNewLoad_elMoreDetails);
-        this.rlMoreDetails = (RelativeLayout) this.rootView.findViewById(R.id.frNewLoad_rlMoreDetails);
-        this.btnMoreDetailsArrowDropDown = (CustomTextView) this.rootView.findViewById(R.id.frNewLoad_btnMoreDetailsArrowDropDown);
-        this.etSpendingWarehouse = (CustomEditText) this.rootView.findViewById(R.id.frNewLoad_etSpendingWarehouse);
-        this.tvDetermineDischargeTimeHint = (CustomTextView) this.rootView.findViewById(R.id.frNewLoad_tvDetermineDischargeTimeHint);
-        this.btnDetermineDischargeTime = (CustomTextView) this.rootView.findViewById(R.id.frNewLoad_btnDetermineDischargeTime);
-        this.tvDetermineExpirationTimeHint = (CustomTextView) this.rootView.findViewById(R.id.frNewLoad_tvDetermineExpirationTimeHint);
-        this.btnDetermineExpirationTime = (CustomTextView) this.rootView.findViewById(R.id.frNewLoad_btnDetermineExpirationTime);
-        this.btnPaymentIsPaidAfterLoadingArriveToDestination = (CustomSwitchButton) this.rootView.findViewById(R.id.frNewLoad_btnPaymentIsPaidAfterLoadingArriveToDestination);
-        this.btnLoadingIsGoingRound = (CustomSwitchButton) this.rootView.findViewById(R.id.frNewLoad_btnLoadingIsGoingRound);
-        this.btnHavingIntactTent = (CustomSwitchButton) this.rootView.findViewById(R.id.frNewLoad_btnHavingIntactTent);
+        this.rlMoreDetails = this.rootView.findViewById(R.id.frNewLoad_rlMoreDetails);
+        this.btnMoreDetailsArrowDropDown = this.rootView.findViewById(R.id.frNewLoad_btnMoreDetailsArrowDropDown);
+        this.etSpendingWarehouse = this.rootView.findViewById(R.id.frNewLoad_etSpendingWarehouse);
+        this.tvDetermineDischargeTimeHint = this.rootView.findViewById(R.id.frNewLoad_tvDetermineDischargeTimeHint);
+        this.btnDetermineDischargeTime = this.rootView.findViewById(R.id.frNewLoad_btnDetermineDischargeTime);
+        this.tvDetermineExpirationTimeHint = this.rootView.findViewById(R.id.frNewLoad_tvDetermineExpirationTimeHint);
+        this.btnDetermineExpirationTime = this.rootView.findViewById(R.id.frNewLoad_btnDetermineExpirationTime);
+        this.btnPaymentIsPaidAfterLoadingArriveToDestination = this.rootView.findViewById(R.id.frNewLoad_btnPaymentIsPaidAfterLoadingArriveToDestination);
+        this.btnLoadingIsGoingRound = this.rootView.findViewById(R.id.frNewLoad_btnLoadingIsGoingRound);
+        this.btnHavingIntactTent = this.rootView.findViewById(R.id.frNewLoad_btnHavingIntactTent);
 
-        this.btnSave = (RelativeLayout) this.rootView.findViewById(R.id.frNewLoad_btnSave);
+        this.btnSave = this.rootView.findViewById(R.id.frNewLoad_btnSave);
     }
 
     private void initComponents() {
@@ -222,14 +218,14 @@ public class NewLoadFragment extends BaseFragment implements NewLoadDelegate.Vie
         lytOrigin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), OriginActivity.class));
+                startActivity(new Intent(getActivity(), RoutingActivity.class));
             }
         });
 
         lytDestinition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), DestinationActivity.class));
+                startActivity(new Intent(getActivity(), RoutingActivity.class));
             }
         });
 

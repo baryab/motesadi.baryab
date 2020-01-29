@@ -28,7 +28,6 @@ import com.noavaran.system.vira.baryab.customviews.ExpandableLayout;
 import com.noavaran.system.vira.baryab.database.models.LoadingFareType;
 import com.noavaran.system.vira.baryab.database.models.TruckType;
 import com.noavaran.system.vira.baryab.enums.ShipmentEditTypeEnum;
-import com.noavaran.system.vira.baryab.helpers.ActivitiesHelpers;
 import com.noavaran.system.vira.baryab.info.AddressInfo;
 import com.noavaran.system.vira.baryab.info.LatLngInfo;
 import com.noavaran.system.vira.baryab.info.PlacesInfo;
@@ -187,7 +186,7 @@ public class EditShipmentActivity extends BaseActivity implements EditShipmentDe
         lyt_Origin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), OriginActivity.class));
+                startActivity(new Intent(getApplicationContext(), RoutingActivity.class));
             }
         });
         lyt_Destinition.setOnClickListener(new View.OnClickListener() {

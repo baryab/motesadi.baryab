@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">باریاب نو</string>
+    <string name="app_name">باریاب</string>
 
     <string name="baseFont">fonts/IRANSansMobile.ttf</string>
     <string name="baseTextIconFont">fonts/materialdesignicons-webfont.ttf</string>
